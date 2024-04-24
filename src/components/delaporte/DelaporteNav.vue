@@ -33,7 +33,7 @@
 
         <li class="nav-item">
           <router-link class="nav-link" to="/delaporte/biografía">
-            <!-- <svg
+            <svg
               aria-hidden="true"
               focusable="false"
               data-prefix="fad"
@@ -55,12 +55,6 @@
                   class="fa-primary"
                 ></path>
               </g>
-            </svg> -->
-
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-              <path
-                d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM144 256a144 144 0 1 1 288 0 144 144 0 1 1 -288 0zm144-64c0 35.3-28.7 64-64 64c-7.1 0-13.9-1.2-20.3-3.3c-5.5-1.8-11.9 1.6-11.7 7.4c.3 6.9 1.3 13.8 3.2 20.7c13.7 51.2 66.4 81.6 117.6 67.9s81.6-66.4 67.9-117.6c-11.1-41.5-47.8-69.4-88.6-71.1c-5.8-.2-9.2 6.1-7.4 11.7c2.1 6.4 3.3 13.2 3.3 20.3z"
-              />
             </svg>
             <span class="link-text">Biografía</span>
           </router-link>
@@ -181,10 +175,11 @@
           </router-link>
         </li>
         <li class="nav-item" @click="toggleTheme" id="themeButton">
-          <a href="#" class="nav-link">
+          <a href="#" class="nav-link" :class="theme">
             <svg
+              v-if="theme === 'dark'"
               class="theme-icon svg-inline--fa fa-moon-stars fa-w-16 fa-7x"
-              id="lightIcon"
+              id="darkIcon"
               aria-hidden="true"
               focusable="false"
               data-prefix="fad"
@@ -207,8 +202,9 @@
               </g>
             </svg>
             <svg
+              v-if="theme === 'light'"
               class="theme-icon svg-inline--fa fa-sun fa-w-16 fa-7x"
-              id="solarIcon"
+              id="lightIcon"
               aria-hidden="true"
               focusable="false"
               data-prefix="fad"
@@ -231,8 +227,9 @@
               </g>
             </svg>
             <svg
+              v-if="theme === 'solar'"
               class="theme-icon svg-inline--fa fa-sunglasses fa-w-18 fa-7x"
-              id="darkIcon"
+              id="solarIcon"
               aria-hidden="true"
               focusable="false"
               data-prefix="fad"
@@ -254,7 +251,7 @@
                 ></path>
               </g>
             </svg>
-            <span class="link-text">Themify</span>
+            <span class="link-text">Theme</span>
           </a>
         </li>
       </ul>
@@ -334,34 +331,42 @@ export default {
   data() {
     return {
       themeMap: {
-        // Add your theme map here
+        dark: 'light',
+        light: 'solar',
+        solar: 'dark'
       },
-      theme: null,
-      bodyClass: null
+      theme: null
     }
+  },
+  mounted() {
+    console.log('localStorage theme:', localStorage.getItem('theme'))
+    if (
+      localStorage.getItem('theme') === '' ||
+      localStorage.getItem('theme') === null ||
+      localStorage.getItem('theme') === undefined
+    ) {
+      console.log('localStorage theme:', localStorage.getItem('theme'))
+      this.theme = Object.keys(this.themeMap)[0]
+      console.log('Theme:', this.theme)
+      localStorage.setItem('theme', this.theme)
+    }
+    console.log('Map:', this.themeMap)
+    console.log('Default theme by themeMap:', Object.keys(this.themeMap)[0])
+    console.log('Theme:', this.theme)
   },
   methods: {
     toggleTheme() {
       const current = localStorage.getItem('theme')
+      console.log('Current:', current)
       const next = this.themeMap[current]
-      this.bodyClass.replace(current, next)
+      this.theme = next
       localStorage.setItem('theme', next)
     }
-  },
-  mounted() {
-    let tmp
-    this.theme =
-      localStorage.getItem('theme') ||
-      ((tmp = Object.keys(this.themeMap)[0]), localStorage.setItem('theme', tmp), tmp)
-    this.bodyClass = document.body.classList
-    this.bodyClass.add(this.theme)
   }
 }
 </script>
 
 <style scoped>
-/* TODO: Look at why the vars don't work */
-
 /* This is like his body */
 body {
   color: black;
