@@ -16,17 +16,17 @@ body::-webkit-scrollbar {
 
 /* Styling the scrollbar track */
 body::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: var(--bg-primary);
   border-radius: 10px;
 }
 
 /* Styling the scrollbar thumb */
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: black;
+  background: grey;
 }
 
 /* Add a hover effect to the scrollbar thumb */
 body::-webkit-scrollbar-thumb:hover {
-  background: grey;
+  background: white;
 }

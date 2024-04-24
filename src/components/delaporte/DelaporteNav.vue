@@ -257,77 +257,18 @@
       </ul>
     </nav>
     <main>
-      <h1>Delaporte Music</h1>
-      <p>
-        Grupo de música electrónica ítalo-español compuesto por Sandra Delaporte y Sergio Salvi.
-      </p>
-      <p>
-        Aunque tocan una gran variedad de temas y estilos, su estilo se puede definir, a rasgos
-        generales, como música electrónica y electro-pop. Sus orígenes tienen mucho que ver con el
-        nuevo desarrollo de músicos actual, ya que sus primeros trabajos se remontan a la plataforma
-        de vídeos YouTube, donde empezaron a subir covers o versiones de canciones que admiraban.
-        Entre las obras que versionaron se encontraban canciones de JJ Cale, Talking Heads o Nina
-        Simone.
-      </p>
-      <p>
-        Tras un par de años buscando su propio estilo, lanzaron sus primeras canciones propias.
-        Desde sus inicios destacan escenarios y estilos originales y rompedores entremezclados con
-        la suave voz de Sandra. Entre sus éxitos destacan varias giras alrededor de España tocando
-        en diversas ciudades como Madrid, Valencia y Barcelona, además de conciertos en diferentes
-        puntos de Europa, como Nápoles. Hasta ahora han tocado en festivales como Paraíso, Noches
-        del Botánico, MadTown Days o Mar Abierto. Además, el primer Aperol Festival contó con ellos
-        en exclusiva en tres tardes en la embajada italiana en Madrid y dos tardes en el
-        espectacular Club de Polo de Barcelona. Su éxito va incluso más allá del plano musical para
-        aterrizar en lo social. Como prueba, cabe destacar que Sandra ha sido elegida como imagen
-        oficial de Amazon Fashion y ambos son imagen de la marca deportiva Nike. Su éxito en redes
-        sociales donde cuentan con decenas de miles de seguidores, lo avala. También su
-        participación en la reedición del talent show Fama: A bailar, al cual pusieron canción
-        oficial con el hit titulado Un jardín. Participación que elevó de forma notable su
-        popularidad entre otro tipo de público. La discografía de Delaporte se inició con el
-        lanzamiento del disco One en el año 2017, disco que recogía seis temas, en inglés y en
-        español. El segundo de los álbumes de Delaporte se llamó Dos, y fue lanzado dos años después
-        del primero, en 2019. El single que sirvió de presentación para este fue Azul marino, con el
-        que lograron tener un notable éxito. Los dos otros álbumes del dúo son Como anoche,
-        publicado en el año 2019, y Las Montañas, que vio la luz en junio de 2022.
-      </p>
-      <p>
-        Grupo de música electrónica ítalo-español compuesto por Sandra Delaporte y Sergio Salvi.
-      </p>
-      <p>
-        Aunque tocan una gran variedad de temas y estilos, su estilo se puede definir, a rasgos
-        generales, como música electrónica y electro-pop. Sus orígenes tienen mucho que ver con el
-        nuevo desarrollo de músicos actual, ya que sus primeros trabajos se remontan a la plataforma
-        de vídeos YouTube, donde empezaron a subir covers o versiones de canciones que admiraban.
-        Entre las obras que versionaron se encontraban canciones de JJ Cale, Talking Heads o Nina
-        Simone.
-      </p>
-      <p>
-        Tras un par de años buscando su propio estilo, lanzaron sus primeras canciones propias.
-        Desde sus inicios destacan escenarios y estilos originales y rompedores entremezclados con
-        la suave voz de Sandra. Entre sus éxitos destacan varias giras alrededor de España tocando
-        en diversas ciudades como Madrid, Valencia y Barcelona, además de conciertos en diferentes
-        puntos de Europa, como Nápoles. Hasta ahora han tocado en festivales como Paraíso, Noches
-        del Botánico, MadTown Days o Mar Abierto. Además, el primer Aperol Festival contó con ellos
-        en exclusiva en tres tardes en la embajada italiana en Madrid y dos tardes en el
-        espectacular Club de Polo de Barcelona. Su éxito va incluso más allá del plano musical para
-        aterrizar en lo social. Como prueba, cabe destacar que Sandra ha sido elegida como imagen
-        oficial de Amazon Fashion y ambos son imagen de la marca deportiva Nike. Su éxito en redes
-        sociales donde cuentan con decenas de miles de seguidores, lo avala. También su
-        participación en la reedición del talent show Fama: A bailar, al cual pusieron canción
-        oficial con el hit titulado Un jardín. Participación que elevó de forma notable su
-        popularidad entre otro tipo de público. La discografía de Delaporte se inició con el
-        lanzamiento del disco One en el año 2017, disco que recogía seis temas, en inglés y en
-        español. El segundo de los álbumes de Delaporte se llamó Dos, y fue lanzado dos años después
-        del primero, en 2019. El single que sirvió de presentación para este fue Azul marino, con el
-        que lograron tener un notable éxito. Los dos otros álbumes del dúo son Como anoche,
-        publicado en el año 2019, y Las Montañas, que vio la luz en junio de 2022.
-      </p>
+      <DelaporteHome :gifPath="gifPath" />
     </main>
   </body>
 </template>
 
 <script>
+import DelaporteHome from './DelaporteHome.vue'
+
 export default {
+  components: {
+    DelaporteHome
+  },
   data() {
     return {
       themeMap: {
@@ -335,7 +276,8 @@ export default {
         light: 'solar',
         solar: 'dark'
       },
-      theme: null
+      theme: null,
+      gifPath: '/src/assets/delaporte_gif.gif'
     }
   },
   mounted() {
@@ -370,7 +312,7 @@ export default {
 /* This is like his body */
 body {
   color: black;
-  background-color: white;
+  background-color: var(--bg-secondary);
   margin: 0;
   padding: 0;
 }
