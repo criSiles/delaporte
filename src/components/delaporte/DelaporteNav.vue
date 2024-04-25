@@ -206,6 +206,7 @@ body {
   background-color: var(--bg-secondary);
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* rem is a unit relative to the font-size of the root element, so 1rem is 16px, 5rem is 80px */
@@ -276,6 +277,9 @@ p {
   /* To don't show the text that is in the link */
   display: none;
   margin-left: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: -0.015rem;
 }
 
 /*  Making the svg smaller and centered*/
