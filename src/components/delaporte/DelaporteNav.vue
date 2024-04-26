@@ -217,18 +217,6 @@ main {
   padding: 1rem;
 }
 
-h1 {
-  font-size: large;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-}
-
-p {
-  max-width: 100%;
-  margin-bottom: 1rem;
-}
-
 .navbar {
   /* To match the margin left we made empty in the main element  */
   position: fixed;
@@ -250,10 +238,6 @@ p {
 .nav-item {
   width: 100%;
 }
-
-/* .nav-item:last-child {
-  margin-top: auto;
-} */
 
 .nav-link {
   display: flex;
@@ -330,7 +314,6 @@ p {
   display: inline;
   position: absolute;
   left: -9999px;
-  transition: 00ms;
 }
 
 .navbar:hover .logo svg {
