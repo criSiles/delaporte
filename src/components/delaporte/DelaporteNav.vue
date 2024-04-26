@@ -33,7 +33,7 @@
         </li>
 
         <li class="nav-item">
-          <router-link class="nav-link" to="/delaporte/biografía">
+          <router-link class="nav-link" :to="{ path: '/', hash: '#bio' }">
             <svg
               class="svg-inline--fa fa-sun fa-w-16 fa-7x"
               aria-hidden="true"
@@ -212,14 +212,12 @@ body {
 /* rem is a unit relative to the font-size of the root element, so 1rem is 16px, 5rem is 80px */
 main {
   /*  We set this margin on the left so our navbar doesn't overlap the main content */
-  margin-left: 5rem;
   text-align: left;
   padding: 1rem;
 }
 
 .navbar {
   /* To match the margin left we made empty in the main element  */
-  position: fixed;
   background-color: var(--bg-secondary);
   transition: width 300ms ease;
   /* overflow: scroll; This breaks it*/
@@ -230,7 +228,6 @@ main {
   padding: 0;
   margin: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
   height: 100%;
 }
@@ -293,7 +290,6 @@ main {
 .logo {
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 1rem;
   text-align: center;
   color: var(--text-secondary);
   background: var(--bg-secondary);
@@ -325,17 +321,12 @@ main {
   /* Making the bar go to the bottom of the page instead of to the left  */
   .navbar {
     bottom: 0;
-    width: 100vw;
-    height: 5rem;
+    position: fixed;
   }
 
   /* Remove the logo */
   .logo {
     display: none;
-  }
-
-  .navbar-nav {
-    flex-direction: row;
   }
 
   .nav-link {
@@ -352,22 +343,17 @@ main {
 @media only screen and (min-width: 600px) {
   .navbar {
     top: 0;
-    /* The width matches the margin on the left of the main content */
-    width: 5rem;
-    height: 100vh;
+    height: 5rem;
+    width: 100vh;
   }
 
   /* To make the animation to the bar when hover */
   .navbar:hover {
-    width: 16rem;
+    width: 100%;
   }
 
   .navbar:hover .link-text {
     display: inline;
-  }
-
-  .navbar:hover .logo svg {
-    margin-left: 11rem;
   }
 
   .navbar:hover .logo-text {

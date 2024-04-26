@@ -36,11 +36,10 @@
 #bio {
   width: 100%;
   height: auto;
-  margin-left: 5rem;
-  text-align: justify;
   padding: 1rem 1rem;
   display: flex;
   flex-direction: column;
+  font-family: 'Roboto', sans-serif;
   /* background-image: url('/src/assets/cuadricula-sin-centro.jpg');  replace 'your-image.jpg' with your image file name */
   /* background-size: cover;  this will make sure your image covers the whole element */
   /* background-repeat: no-repeat; /* this will prevent the image from repeating */
@@ -49,11 +48,13 @@
 .bio-title {
   text-transform: uppercase;
   font-size: 2rem;
-  font-weight: semibold;
+  font-weight: bold;
   margin-bottom: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--text-primary);
+  letter-spacing: -0.015rem;
 }
 
 @media screen and (max-width: 600px) {
