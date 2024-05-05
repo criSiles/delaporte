@@ -1,6 +1,6 @@
 <template>
   <section id="bio">
-    <h1 class="bio-title">Biografía</h1>
+    <h1 class="title">Biografía</h1>
     <p>
       Bajo el nombre de Delaporte se conoce al grupo de música electrónica ítalo-español compuesto
       por Sandra Delaporte y Sergio Salvi. Aunque tocan una gran variedad de temas y estilos, su
@@ -43,18 +43,6 @@
   /* background-image: url('/src/assets/cuadricula-sin-centro.jpg');  replace 'your-image.jpg' with your image file name */
   /* background-size: cover;  this will make sure your image covers the whole element */
   /* background-repeat: no-repeat; /* this will prevent the image from repeating */
-}
-
-.bio-title {
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: var(--text-primary);
-  letter-spacing: -0.015rem;
 }
 
 @media screen and (max-width: 600px) {

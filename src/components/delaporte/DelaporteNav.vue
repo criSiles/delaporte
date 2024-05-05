@@ -192,7 +192,7 @@ export default {
   },
   data() {
     return {
-      gifPath: '/src/assets/delaporte_gif.gif',
+      gifPath: '/src/assets/AquiAhoraGif.gif',
       isHovering: false
     }
   }
