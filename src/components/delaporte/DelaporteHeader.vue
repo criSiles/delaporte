@@ -2,7 +2,7 @@
   <section id="header">
     <HamburgerComponent />
     <div class="header_logo">
-      <img src="/src/assets/LogoDelaporte.png" alt="Delaporte logo" />
+      <img :src="logoPath" alt="Delaporte logo" />
     </div>
     <ul class="social_icons">
       <!-- TODO:  -->
@@ -12,23 +12,20 @@
 
       <!-- The X icon doesn't work -->
       <li>
-        <i class="fab fa-twitter"></i>
+        <a :href="twitterPath"><i class="fab fa-twitter"></i></a>
       </li>
       <li>
-        <i class="fab fa-instagram"></i>
+        <a :href="instagramPath"><i class="fab fa-instagram"></i></a>
       </li>
       <li>
-        <i class="fab fa-facebook"></i>
+        <a :href="facebookPath"><i class="fab fa-facebook"></i></a>
       </li>
       <li>
-        <i class="fab fa-spotify"></i>
+        <a :href="spotifyPath"><i class="fab fa-spotify"></i></a>
       </li>
       <li>
-        <i class="fab fa-youtube"></i>
+        <a :href="youtubePath"><i class="fab fa-youtube"></i></a>
       </li>
-      <!-- <li>
-          <i class="fa fa-envelope"></i>
-        </li> -->
     </ul>
   </section>
 </template>
@@ -36,6 +33,14 @@
 <script setup>
 import HamburgerComponent from '@/components/delaporte/HamburgerComponent.vue'
 
+defineProps({
+  logoPath: String,
+  twitterPath: String,
+  instagramPath: String,
+  facebookPath: String,
+  spotifyPath: String,
+  youtubePath: String
+})
 // TODO: Why this doesn't work?
 
 // import { library } from '@fortawesome/fontawesome-svg-core'
@@ -74,6 +79,7 @@ import HamburgerComponent from '@/components/delaporte/HamburgerComponent.vue'
 .social_icons {
   margin: 0;
   padding: 0;
+  /* TODO: Why is not applying? When I wrote the a this turned to purple */
   color: #fff;
   list-style: none;
   display: flex;
