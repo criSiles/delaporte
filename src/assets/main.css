@@ -16,19 +16,19 @@ body::-webkit-scrollbar {
 
 /* Styling the scrollbar track */
 body::-webkit-scrollbar-track {
-  background: var(--bg-primary);
+  background: white;
   border-radius: 10px;
 }
 
 /* Styling the scrollbar thumb */
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: grey;
+  background: var(--text-primary);
 }
 
 /* Add a hover effect to the scrollbar thumb */
 body::-webkit-scrollbar-thumb:hover {
-  background: white;
+  background: var(--bg-secondary);
 }
 
 /* Common CSS */

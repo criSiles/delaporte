@@ -1,5 +1,6 @@
 <template>
   <DelaporteHeader />
+  <DelaporteHome :gifPath="gifPath" />
   <DelaporteBio />
   <DelaporteMusic />
   <DelaporteTour />
@@ -14,4 +15,7 @@ import DelaporteMusic from '@/components/delaporte/DelaporteMusic.vue'
 import DelaporteShop from '@/components/delaporte/DelaporteShop.vue'
 import DelaporteTour from '@/components/delaporte/DelaporteTour.vue'
 import DelaporteContact from '@/components/delaporte/DelaporteContact.vue'
+import DelaporteHome from '@/components/delaporte/DelaporteHome.vue'
+
+const gifPath = '/src/assets/AquiAhoraGif.gif'
 </script>
