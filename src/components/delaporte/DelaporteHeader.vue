@@ -5,12 +5,6 @@
       <img :src="logoPath" alt="Delaporte logo" />
     </div>
     <ul class="social_icons">
-      <!-- TODO:  -->
-      <!-- <li>
-                <font-awesome-icon icon="fa-brands fa-spotify" />
-              </li> -->
-
-      <!-- The X icon doesn't work -->
       <li>
         <a :href="twitterPath"><i class="fab fa-twitter"></i></a>
       </li>
@@ -41,26 +35,13 @@ defineProps({
   spotifyPath: String,
   youtubePath: String
 })
-// TODO: Why this doesn't work?
-
-// import { library } from '@fortawesome/fontawesome-svg-core'
-// import { fab } from '@fortawesome/free-brands-svg-icons'
-// import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-
-// library.add(fab)
-
-// export default {
-//   components: {
-//     FontAwesomeIcon
-//   }
-// }
 </script>
 <style>
 #header {
   background-color: var(--bg-secondary);
   color: #fff;
   margin-top: 0.2rem;
-  padding: 1rem;
+  padding: 1rem 4rem;
   min-height: 66px;
   height: 66px;
   left: 0px;
@@ -77,12 +58,18 @@ defineProps({
 }
 
 .social_icons {
+  display: flex;
+  list-style: none;
   margin: 0;
   padding: 0;
-  /* TODO: Why is not applying? When I wrote the a this turned to purple */
-  color: #fff;
-  list-style: none;
-  display: flex;
   gap: 1rem;
+}
+
+.social_icons li a {
+  color: #fff;
+}
+
+.social_icons li a:hover {
+  color: #b53033;
 }
 </style>

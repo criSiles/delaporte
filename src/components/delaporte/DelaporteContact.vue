@@ -7,28 +7,37 @@
       seguirlos en sus redes sociales, donde comparten información sobre sus próximos conciertos,
       lanzamientos y novedades.
     </p>
-    <p>
-      <a href="https://www.delaporte.com" target="_blank" rel="noopener noreferrer"
-        >Página web oficial</a
-      >
-    </p>
-    <p>
-      <a
-        href="https://www.instagram.com/delaporteoficial/"
-        target="_blank"
-        rel="noopener noreferrer"
-        >Instagram</a
-      >
-    </p>
-    <p>
-      <a href="https://www.facebook.com/delaporteoficial/" target="_blank" rel="noopener noreferrer"
-        >Facebook</a
-      >
-    </p>
-    <p>
-      <a href="https://twitter.com/delaporteoficial" target="_blank" rel="noopener noreferrer"
-        >Twitter</a
-      >
-    </p>
   </section>
 </template>
+
+<style>
+#contact {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding: 1rem 4rem;
+  font-family: 'Roboto', sans-serif;
+  border-top: 0.5px solid grey;
+}
+
+#contact p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+#contact .concerts {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#contact a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#contact a:hover {
+  color: #b53033;
+}
+</style>

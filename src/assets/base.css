@@ -55,7 +55,8 @@
 *::after {
   box-sizing: border-box;
   margin: 0;
-  font-weight: normal;
+  /* I'm going to comment this because fucks th <b> tag in the bio */
+  /* font-weight: normal; */
 }
 
 body {

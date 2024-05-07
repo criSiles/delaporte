@@ -4,11 +4,19 @@
       id="menu-items"
       :style="{ transform: !isCheckboxChecked ? 'translateX(0)' : 'translateX(140%)' }"
     >
-      <li><router-link :to="{ path: '/', hash: '#bio' }">Biografía</router-link></li>
-      <li><router-link :to="{ path: '/', hash: '#music' }">Música</router-link></li>
-      <li><router-link :to="{ path: '/', hash: '#tour' }">Tour</router-link></li>
-      <li><router-link :to="{ path: '/', hash: '#shop' }">Tienda</router-link></li>
-      <li><router-link :to="{ path: '/', hash: '#contact' }">Contacto</router-link></li>
+      <li>
+        <router-link class="nav-links" :to="{ path: '/', hash: '#bio' }">Biografía</router-link>
+      </li>
+      <li>
+        <router-link class="nav-links" :to="{ path: '/', hash: '#music' }">Música</router-link>
+      </li>
+      <li><router-link class="nav-links" :to="{ path: '/', hash: '#tour' }">Tour</router-link></li>
+      <li>
+        <router-link class="nav-links" :to="{ path: '/', hash: '#shop' }">Tienda</router-link>
+      </li>
+      <li>
+        <router-link class="nav-links" :to="{ path: '/', hash: '#contact' }">Contacto</router-link>
+      </li>
     </ul>
     <div id="hamburger" class="menu-container menu-size">
       <input
@@ -57,20 +65,21 @@ export default {
   right: 138.5vw;
   z-index: 2;
 }
-
 #menu-items li {
+  list-style: none;
+}
+.nav-links {
+  text-decoration: none;
   list-style: none;
   margin-right: 1rem;
   font-size: 2rem;
-  /* TODO: Why is not appying? */
   color: #fff;
-  text-decoration: none;
 }
 
 /* TODO: Why is not appying? */
-#menu-items li:hover {
-  text-underline-offset: 0.6rem;
-  text-decoration-color: black;
+.nav-links:hover {
+  text-decoration: none;
+  color: #b53033;
 }
 
 #menu-checkbox {
