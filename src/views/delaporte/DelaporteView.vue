@@ -56,7 +56,7 @@ const spotifyPath =
 const youtubePath = 'https://www.youtube.com/channel/UCtXuLi6tQ4y50QxD3x19riQ'
 
 // BIO
-const bioText = `<p>Delaporte es un dúo de música electrónica formado por Sandra Delaporte y Sergio Salvi. Su música es una mezcla de pop, electrónica y ritmos urbanos, aunque ha ido moviéndose más hacia el techno.</p>
+const bioText = `<p>Delaporte es un dúo hispano-italiano afincado en Madrid, formado por Sandra Delaporte y Sergio Salvi. Hoy en día están considerados una de las mejores bandas de pop electrónico en España. Su música es una mezcla de pop, electrónica y ritmos urbanos, aunque ha ido moviéndose más hacia el techno.</p>
 <br><p>La discografía del grupo compone de varios álbumes, EPs y sencillos lanzados a lo largo de los años. Comenzaron en 2017 con su primer EP <b>One</b>, que incluía seis temas entre inglés y español. En 2018 sacaron su segundo EP <b>Uno</b> con canciones tan transcendentales para su carrera como <b>Un Jardín</b> y <b>Cariñito</b>. En 2019, lanzaron su primer álbum titulado <b>Como Anoche</b>, con el sencillo <b>Azul marino</b> como presentación, el cual obtuvo un notable éxito. Su siguiente álbum fue <b>Las Montañas</b>, lanzado en 2020. En 2021 pudimos escuchar dos discos increíbles, <b>Titanas</b> lleno de colaboraciones con mujeres del panorama musical actual en España y <b>Abril</b> en el que podemos descubrir canciones tan potentes como <b>Droga Dura</b>. Finalmente en 2024 lanzaron el álbum <b>Aqui y Ahora</b> con un tono más techno y que anima a bailar.</p>
 <br> <p>Delaporte ha mantenido una producción constante y ha demostrado una evolución en su estilo musical a lo largo de su discografía. Su directo se puede describir como eneretizante e increiblemente acogedor.</p>`
 
