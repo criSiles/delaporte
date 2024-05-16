@@ -34,7 +34,7 @@
 }
 
 #shop a {
-  color: var(--primary);
+  color: var(--text-primary);
   text-decoration: none;
   font-weight: bold;
 }

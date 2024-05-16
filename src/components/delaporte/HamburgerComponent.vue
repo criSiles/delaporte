@@ -76,7 +76,6 @@ export default {
   color: #fff;
 }
 
-/* TODO: Why is not appying? */
 .nav-links:hover {
   text-decoration: none;
   color: #b53033;
@@ -88,14 +87,29 @@ export default {
   opacity: 0;
   z-index: 4;
 }
+
+input[id='menu-checkbox']:checked ~ #hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+
+input[id='menu-checkbox']:checked ~ #hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+input[id='menu-checkbox']:checked ~ #hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
 .menu-container {
   margin: auto;
   position: relative;
 }
+
 .menu-size {
   width: 1rem;
   height: 1rem;
 }
+
 .absolute {
   position: absolute;
   top: 0;

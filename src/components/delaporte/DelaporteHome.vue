@@ -1,11 +1,6 @@
 <template>
   <section id="home">
-    <img
-      class="gif"
-      id="sticky-parallax-header"
-      :src="gifPath"
-      :style="{ transform: `scale(${scaleFactor})` }"
-    />
+    <img class="gif" :src="gifPath" :style="{ transform: `scale(${scaleFactor})` }" />
   </section>
 </template>
 
@@ -20,16 +15,18 @@ export default {
     }
   },
   mounted() {
+    //  window is the global object in a browser context, representing the window containing the DOM document
+    // addEventListener and removeEventListener are methods JS methods, where 'scroll' is the event type and 'handleScroll' is the event handler
     window.addEventListener('scroll', this.handleScroll)
   },
   beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll)
   },
   methods: {
+    // handleScroll is a method that changes the scale of the gif based on the window's scroll position
     handleScroll() {
-      const maxScroll = 2400
-      const scale = Math.max(0, (maxScroll - window.scrollY) / maxScroll)
-      console.log(scrollY, scale)
+      const MAX_SCROLL = 2400
+      const scale = Math.max(0, (MAX_SCROLL - window.scrollY) / MAX_SCROLL)
       this.scaleFactor = scale
     }
   }
@@ -46,6 +43,6 @@ export default {
   max-width: 100%;
   height: auto;
   padding: 1rem 4rem;
-  transition: transform 0.5s;
+  /* transition: transform 0.2s; */
 }
 </style>

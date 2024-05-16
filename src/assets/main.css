@@ -1,8 +1,8 @@
 @import './base.css';
 :root {
   font-size: 16px;
-  --text-primary: #b6b6b6;
-  --text-secondary: #f2f2f2;
+  --text-primary: #fff;
+  --text-secondary: #fbfbfb;
   --bg-primary: #141418;
   --bg-secondary: #181818;
   --transition-speed: 600ms;
