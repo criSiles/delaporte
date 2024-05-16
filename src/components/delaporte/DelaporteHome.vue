@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     handleScroll() {
-      const maxScroll = 1200
+      const maxScroll = 2400
       const scale = Math.max(0, (maxScroll - window.scrollY) / maxScroll)
       console.log(scrollY, scale)
       this.scaleFactor = scale
@@ -41,6 +41,7 @@ export default {
   margin-top: 3rem;
 }
 .gif {
+  margin-top: 0rem;
   width: 100%;
   max-width: 100%;
   height: auto;

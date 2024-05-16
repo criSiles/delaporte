@@ -41,9 +41,9 @@ defineProps({
   background-color: var(--bg-secondary);
   color: #fff;
   padding: 1rem 4rem;
-  min-height: 66px;
+  min-height: 64px;
   width: 100%;
-  height: 66px;
+  height: 64px;
   left: 0px;
   right: 0px;
   display: flex;
