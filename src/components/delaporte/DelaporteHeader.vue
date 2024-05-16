@@ -40,15 +40,18 @@ defineProps({
 #header {
   background-color: var(--bg-secondary);
   color: #fff;
-  margin-top: 0.2rem;
   padding: 1rem 4rem;
   min-height: 66px;
+  width: 100%;
   height: 66px;
   left: 0px;
   right: 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 .header_logo img {
