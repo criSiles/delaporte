@@ -1,6 +1,8 @@
 <template>
   <section id="tour">
-    <h1 class="title">Tour</h1>
+    <router-link class="nav-links" :to="{ path: '/', hash: '#tour' }">
+      <h1 class="title">Tour</h1>
+    </router-link>
     <p>
       Delaporte es un grupo que se caracteriza por ofrecer espectáculos en directo llenos de energía
       y pasión. A lo largo de su carrera, han recorrido numerosos escenarios de todo el mundo,
@@ -31,15 +33,5 @@
 #tour .concerts {
   margin-top: 2rem;
   text-align: center;
-}
-
-#tour a {
-  color: var(--text-primary);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#tour a:hover {
-  color: #b53033;
 }
 </style>

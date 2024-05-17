@@ -1,6 +1,8 @@
 <template>
   <section id="shop">
-    <h1 class="title">Tienda</h1>
+    <router-link class="nav-links" :to="{ path: '/', hash: '#shop' }">
+      <h1 class="title">Tienda</h1>
+    </router-link>
     <p>
       En la tienda oficial de Delaporte podrás encontrar todo tipo de merchandising relacionado con
       el grupo, como camisetas, sudaderas, gorras, pósters y mucho más. Además, también podrás
@@ -31,15 +33,5 @@
 #shop .shop_link {
   margin-top: 2rem;
   text-align: center;
-}
-
-#shop a {
-  color: var(--text-primary);
-  text-decoration: none;
-  font-weight: bold;
-}
-
-#shop a:hover {
-  color: #b53033;
 }
 </style>

@@ -1,6 +1,8 @@
 <template>
   <section id="bio">
-    <h1 class="title">Biografía</h1>
+    <router-link class="nav-links" :to="{ path: '/', hash: '#bio' }"
+      ><h1 class="title">Biografía</h1>
+    </router-link>
     <div class="bio_content">
       <div class="text_container" v-html="bioText"></div>
       <div class="img_container">

@@ -5,12 +5,12 @@
       :style="{ transform: !isCheckboxChecked ? 'translateX(0)' : 'translateX(140%)' }"
     >
       <li>
-        <router-link class="nav-links" :to="{ path: '/', hash: '#bio' }">Biografía</router-link>
-      </li>
-      <li>
         <router-link class="nav-links" :to="{ path: '/', hash: '#music' }">Música</router-link>
       </li>
       <li><router-link class="nav-links" :to="{ path: '/', hash: '#tour' }">Tour</router-link></li>
+      <li>
+        <router-link class="nav-links" :to="{ path: '/', hash: '#bio' }">Biografía</router-link>
+      </li>
       <li>
         <router-link class="nav-links" :to="{ path: '/', hash: '#shop' }">Tienda</router-link>
       </li>
@@ -47,21 +47,22 @@ export default {
 #menu {
   display: flex;
   align-items: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Rock Salt', cursive;
   text-transform: uppercase;
 }
 #menu-items {
-  background-color: var(--bg-secondary);
+  background: var(--bg-primary);
   height: 100vh;
   width: 100%;
-  padding-top: 10rem;
+  padding-top: 6rem;
   position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: start;
+  gap: 2rem;
   text-align: center;
   transition: transform 0.5s ease-in-out;
-  top: 0rem;
+  top: 0;
   right: 138.5vw;
   z-index: 2;
 }
@@ -71,14 +72,13 @@ export default {
 .nav-links {
   text-decoration: none;
   list-style: none;
-  margin-right: 1rem;
-  font-size: 2rem;
-  color: #fff;
+  font-size: 1.2rem;
+  color: var(--text-primary);
 }
 
 .nav-links:hover {
   text-decoration: none;
-  color: #b53033;
+  color: var(--text-secondary);
 }
 
 #menu-checkbox {
@@ -130,7 +130,7 @@ input[id='menu-checkbox']:checked ~ #hamburger-lines .line3 {
   height: 0.15rem;
   width: 100%;
   border-radius: 0.625rem;
-  background: #fff;
+  background: var(--text-primary);
 }
 
 #hamburger-lines .line1 {

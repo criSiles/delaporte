@@ -2,11 +2,10 @@
 :root {
   font-size: 16px;
   --text-primary: #fff;
-  --text-secondary: #fbfbfb;
-  --bg-primary: #141418;
-  --bg-secondary: #181818;
+  --text-secondary: #b53033;
+  --bg-primary: #181818;
   --transition-speed: 600ms;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* Styling the scrollbar */
@@ -16,31 +15,52 @@ body::-webkit-scrollbar {
 
 /* Styling the scrollbar track */
 body::-webkit-scrollbar-track {
-  background: white;
+  background: var(--text-primary);
   border-radius: 10px;
 }
 
 /* Styling the scrollbar thumb */
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: var(--text-primary);
+  background: var(--text-secondary);
 }
 
 /* Add a hover effect to the scrollbar thumb */
 body::-webkit-scrollbar-thumb:hover {
-  background: var(--bg-secondary);
+  background: var(--bg-primary);
 }
 
 /* Common CSS */
 
 .title {
+  font-family: 'Rock Salt', cursive;
   text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   color: var(--text-primary);
   letter-spacing: -0.015rem;
+  opacity: 0.97;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  opacity: 0.95;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--text-secondary);
+  font-weight: 500;
 }

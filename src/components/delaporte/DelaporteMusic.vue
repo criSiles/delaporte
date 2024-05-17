@@ -1,6 +1,8 @@
 <template>
   <section id="music">
-    <h1 class="title">Música</h1>
+    <router-link class="nav-links" :to="{ path: '/', hash: '#music' }">
+      <h1 class="title">Música</h1>
+    </router-link>
     <ul class="discography_gallery">
       <li class="album_container">
         <a :href="spotifyPathAlbum1">
@@ -100,7 +102,7 @@ defineProps({
 .album_container:hover .spotify_icon {
   display: flex;
   z-index: 1;
-  color: white;
+  color: var(--text-primary);
   font-size: 2rem;
 }
 

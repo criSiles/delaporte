@@ -1,29 +1,42 @@
 <template>
   <section id="header">
-    <HamburgerComponent />
-    <div class="header_logo">
-      <img :src="logoPath" alt="Delaporte logo" />
+    <div class="header_section start">
+      <HamburgerComponent />
     </div>
-    <button class="social_button" v-if="isMobile" @click="showIcons = !showIcons">
-      <i class="fas fa-link"></i>
-    </button>
-    <ul class="social_icons" v-show="!isMobile || showIcons">
-      <li>
-        <a :href="twitterPath"><i class="fab fa-twitter"></i></a>
-      </li>
-      <li>
-        <a :href="instagramPath"><i class="fab fa-instagram"></i></a>
-      </li>
-      <li>
-        <a :href="facebookPath"><i class="fab fa-facebook"></i></a>
-      </li>
-      <li>
-        <a :href="spotifyPath"><i class="fab fa-spotify"></i></a>
-      </li>
-      <li>
-        <a :href="youtubePath"><i class="fab fa-youtube"></i></a>
-      </li>
-    </ul>
+    <div class="header_section center">
+      <router-link :to="{ path: '/', hash: '#home' }">
+        <div class="header_logo">
+          <img :src="logoPath" alt="Delaporte logo" />
+        </div>
+      </router-link>
+    </div>
+    <div class="header_section end">
+      <button
+        class="social_button"
+        v-if="isMobile"
+        @click="showIcons = !showIcons"
+        :style="{ 'margin-right': showIcons ? '1rem' : '0' }"
+      >
+        <i class="fas fa-link"></i>
+      </button>
+      <ul class="social_icons" v-show="!isMobile || showIcons">
+        <li>
+          <a :href="twitterPath"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li>
+          <a :href="instagramPath"><i class="fab fa-instagram"></i></a>
+        </li>
+        <li>
+          <a :href="facebookPath"><i class="fab fa-facebook"></i></a>
+        </li>
+        <li>
+          <a :href="spotifyPath"><i class="fab fa-spotify"></i></a>
+        </li>
+        <li>
+          <a :href="youtubePath"><i class="fab fa-youtube"></i></a>
+        </li>
+      </ul>
+    </div>
   </section>
 </template>
 
@@ -49,6 +62,7 @@ const checkMobile = () => {
 
 onMounted(() => {
   checkMobile()
+  // When the window is resized, run the checkMobile function
   window.addEventListener('resize', checkMobile)
 })
 
@@ -58,8 +72,8 @@ onBeforeUnmount(() => {
 </script>
 <style>
 #header {
-  background-color: var(--bg-secondary);
-  color: #fff;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
   padding: 1rem 4rem;
   min-height: 64px;
   width: 100%;
@@ -73,10 +87,29 @@ onBeforeUnmount(() => {
   top: 0;
   z-index: 1;
 }
+.header_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.header_section.start {
+  justify-content: flex-start;
+}
+
+.header_section.center {
+  justify-content: center;
+}
+
+.header_section.end {
+  justify-content: flex-end;
+}
 
 .header_logo img {
   width: 140px;
   max-height: 66px;
+  margin: auto;
 }
 
 .social_icons {
@@ -88,20 +121,21 @@ onBeforeUnmount(() => {
 }
 
 .social_icons li a {
-  color: #fff;
+  color: var(--text-primary);
 }
 
-.social_icons li a:hover {
-  color: #b53033;
+.social_icons li a:hover,
+.social_button:hover {
+  color: var(--text-secondary);
 }
 
 .social_button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-primary);
   border: none;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 @media (max-width: 600px) {

@@ -9,5 +9,9 @@
   display: flex;
   justify-content: center;
   padding: 1rem;
+  font-family: 'Rock Salt', cursive;
+  color: var(--text-primary);
+  opacity: 0.97;
+  font-size: 0.9rem;
 }
 </style>

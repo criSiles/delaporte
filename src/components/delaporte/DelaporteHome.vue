@@ -43,6 +43,5 @@ export default {
   max-width: 100%;
   height: auto;
   padding: 1rem 4rem;
-  /* transition: transform 0.2s; */
 }
 </style>

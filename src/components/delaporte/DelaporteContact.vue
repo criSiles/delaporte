@@ -1,6 +1,8 @@
 <template>
   <section id="contact">
-    <h1 class="title">Contacto</h1>
+    <router-link class="nav-links" :to="{ path: '/', hash: '#contact' }">
+      <h1 class="title">Contacto</h1>
+    </router-link>
     <p>
       Para contactar con Delaporte, puedes hacerlo a través de su página web oficial, donde
       encontrarás toda la información necesaria para ponerte en contacto con ellos. También puedes
@@ -32,12 +34,12 @@
 }
 
 #contact a {
-  color: var(--primary);
+  color: var(--text-primary);
   text-decoration: none;
   font-weight: bold;
 }
 
 #contact a:hover {
-  color: #b53033;
+  color: var(--text-secondary);
 }
 </style>
