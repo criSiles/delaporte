@@ -1,4 +1,5 @@
 <template>
+  <DelaporteHome :gifPath="gifPath" />
   <DelaporteHeader
     :logoPath="logoPath"
     :twitterPath="twitterPath"
@@ -6,14 +7,6 @@
     :facebookPath="facebookPath"
     :spotifyPath="spotifyPath"
     :youtubePath="youtubePath"
-  />
-  <DelaporteHome :gifPath="gifPath" />
-  <DelaporteBio
-    :bioText="bioText"
-    :delaportePhoto1="delaportePhoto1"
-    :delaportePhoto2="delaportePhoto2"
-    :delaportePhoto3="delaportePhoto3"
-    :delaportePhoto4="delaportePhoto4"
   />
   <DelaporteMusic
     :album1="album1"
@@ -28,6 +21,14 @@
     :spotifyPathAlbum5="spotifyPathAlbum5"
   />
   <DelaporteTour />
+
+  <DelaporteBio
+    :bioText="bioText"
+    :delaportePhoto1="delaportePhoto1"
+    :delaportePhoto2="delaportePhoto2"
+    :delaportePhoto3="delaportePhoto3"
+    :delaportePhoto4="delaportePhoto4"
+  />
   <DelaporteShop />
   <DelaporteContact />
   <DelaporteFooter />

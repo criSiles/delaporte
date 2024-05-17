@@ -4,7 +4,10 @@
     <div class="header_logo">
       <img :src="logoPath" alt="Delaporte logo" />
     </div>
-    <ul class="social_icons">
+    <button class="social_button" v-if="isMobile" @click="showIcons = !showIcons">
+      <i class="fas fa-link"></i>
+    </button>
+    <ul class="social_icons" v-show="!isMobile || showIcons">
       <li>
         <a :href="twitterPath"><i class="fab fa-twitter"></i></a>
       </li>
@@ -25,6 +28,7 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onBeforeUnmount } from 'vue'
 import HamburgerComponent from '@/components/delaporte/HamburgerComponent.vue'
 
 defineProps({
@@ -34,6 +38,22 @@ defineProps({
   facebookPath: String,
   spotifyPath: String,
   youtubePath: String
+})
+
+const isMobile = ref(false)
+const showIcons = ref(false)
+
+const checkMobile = () => {
+  isMobile.value = window.innerWidth <= 600
+}
+
+onMounted(() => {
+  checkMobile()
+  window.addEventListener('resize', checkMobile)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('resize', checkMobile)
 })
 </script>
 <style>
@@ -57,7 +77,6 @@ defineProps({
 .header_logo img {
   width: 140px;
   max-height: 66px;
-  margin-left: 5.5rem;
 }
 
 .social_icons {
@@ -74,5 +93,23 @@ defineProps({
 
 .social_icons li a:hover {
   color: #b53033;
+}
+
+.social_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-secondary);
+  border: none;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .social_icons {
+    margin-top: 10rem;
+    margin-right: -2rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 </style>
