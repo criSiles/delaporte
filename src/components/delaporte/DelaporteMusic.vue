@@ -7,36 +7,37 @@
       <li class="album_container">
         <a :href="spotifyPathAlbum1">
           <img class="album_image" :src="album1" />
-          <i class="fab fa-spotify spotify_icon"></i
-        ></a>
+          <i class="fab fa-spotify spotify_icon"></i>
+        </a>
       </li>
       <li class="album_container">
         <a :href="spotifyPathAlbum2">
           <img class="album_image" :src="album2" />
-          <i class="fab fa-spotify spotify_icon"></i
-        ></a>
+          <i class="fab fa-spotify spotify_icon"></i>
+        </a>
       </li>
       <li class="album_container">
         <a :href="spotifyPathAlbum3">
           <img class="album_image" :src="album3" />
-          <i class="fab fa-spotify spotify_icon"></i
-        ></a>
+          <i class="fab fa-spotify spotify_icon"></i>
+        </a>
       </li>
       <li class="album_container">
         <a :href="spotifyPathAlbum4">
           <img class="album_image" :src="album4" />
-          <i class="fab fa-spotify spotify_icon"></i
-        ></a>
+          <i class="fab fa-spotify spotify_icon"></i>
+        </a>
       </li>
       <li class="album_container">
         <a :href="spotifyPathAlbum5">
           <img class="album_image" :src="album5" />
-          <i class="fab fa-spotify spotify_icon"></i
-        ></a>
+          <i class="fab fa-spotify spotify_icon"></i>
+        </a>
       </li>
     </ul>
   </section>
 </template>
+
 <script setup>
 defineProps({
   album1: String,
@@ -51,6 +52,7 @@ defineProps({
   spotifyPathAlbum5: String
 })
 </script>
+
 <style scoped>
 #music {
   width: 100%;
@@ -63,8 +65,10 @@ defineProps({
 }
 
 .discography_gallery {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
 }
 
 .album_container {
@@ -73,6 +77,8 @@ defineProps({
   flex-direction: column;
   align-items: center;
   list-style: none;
+  flex: 1 1 14%; /* Adjusts the basis to fit five items in one row */
+  margin: 1rem;
 }
 
 .album_container a {
@@ -80,9 +86,9 @@ defineProps({
 }
 
 .album_image {
-  width: 90%;
-  height: 90%;
-  margin: 1rem 1rem;
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
   z-index: 0;
 }
 
@@ -108,8 +114,17 @@ defineProps({
 
 @media screen and (max-width: 780px) {
   .discography_gallery {
-    grid-template-rows: none;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    justify-content: center;
+  }
+
+  .album_container {
+    flex: 1 1 45%; /* Adjusts the basis to fit two items in one row */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .album_container {
+    flex: 1 1 100%; /* Adjusts the basis to fit one item in one row */
   }
 }
 </style>
