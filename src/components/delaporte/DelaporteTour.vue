@@ -3,15 +3,55 @@
     <router-link class="nav-links" :to="{ path: '/', hash: '#tour' }">
       <h1 class="title">Tour</h1>
     </router-link>
-    <p>
-      Delaporte es un grupo que se caracteriza por ofrecer espectáculos en directo llenos de energía
-      y pasión. A lo largo de su carrera, han recorrido numerosos escenarios de todo el mundo,
-      compartiendo su música con miles de seguidores. Si quieres disfrutar de su directo, no te
-      pierdas las fechas de su próxima gira.
-    </p>
-    <p class="concerts">
-      <a href="https://linktr.ee/delaportemusic">Próximos conciertos</a>
-    </p>
+    <table>
+      <!-- <colgroup>
+        <col />
+        <col />
+        <col />
+        <col />
+        <col />
+      </colgroup> -->
+      <thead>
+        <tr>
+          <th>Fecha</th>
+          <th>Ciudad</th>
+          <th>Recinto</th>
+          <th>Entradas</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>01.11.2024</td>
+          <td>Málaga</td>
+          <td>Auditorio Municipal</td>
+          <td>Comprar</td>
+        </tr>
+        <tr>
+          <td>01.11.2024</td>
+          <td>Málaga</td>
+          <td>Auditorio Municipal</td>
+          <td>Comprar</td>
+        </tr>
+        <tr>
+          <td>01.11.2024</td>
+          <td>Málaga</td>
+          <td>Auditorio Municipal</td>
+          <td>Comprar</td>
+        </tr>
+        <tr>
+          <td>01.11.2024</td>
+          <td>Málaga</td>
+          <td>Auditorio Municipal</td>
+          <td>Comprar</td>
+        </tr>
+        <tr>
+          <td>01.11.2024</td>
+          <td>Málaga</td>
+          <td>Auditorio Municipal</td>
+          <td>Comprar</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
 </template>
 <style>
@@ -25,13 +65,14 @@
   border-top: 0.5px solid grey;
 }
 
-#tour p {
-  font-size: 1.2rem;
-  line-height: 1.5;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-#tour .concerts {
-  margin-top: 2rem;
-  text-align: center;
+th,
+td {
+  text-align: left;
+  padding: 1rem;
 }
 </style>
