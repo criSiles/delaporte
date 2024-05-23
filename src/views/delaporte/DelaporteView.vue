@@ -19,6 +19,8 @@
     :spotifyPathAlbum3="spotifyPathAlbum3"
     :spotifyPathAlbum4="spotifyPathAlbum4"
     :spotifyPathAlbum5="spotifyPathAlbum5"
+    :spotifyPath="spotifyPath"
+    :youtubePath="youtubePath"
   />
   <DelaporteTour />
 
