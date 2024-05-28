@@ -228,6 +228,7 @@
   .cities-container,
   .tickets-container {
     margin-top: 0;
+    white-space: nowrap;
   }
 
   .btn {

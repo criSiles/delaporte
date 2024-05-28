@@ -32,7 +32,11 @@
     :delaportePhoto4="delaportePhoto4"
   />
   <DelaporteShop />
-  <DelaporteContact />
+  <DelaporteContact
+    :mailInfo="mailInfo"
+    :mailManagement="mailManagement"
+    :mailHiring="mailHiring"
+  />
   <DelaporteFooter />
 </template>
 
@@ -84,4 +88,9 @@ const spotifyPathAlbum4 =
   'https://open.spotify.com/intl-es/album/1SDB8j1wY6xzKSAGASJKWB?si=qCnuww-GS1KYZFn-1Tz-wA'
 const spotifyPathAlbum5 =
   'https://open.spotify.com/intl-es/album/1jphrfgmheLuAI0T9E1SG4?si=PtzbIb03Rmy7R4xFk1lFCw'
+
+// CONTACT
+const mailInfo = 'delaporte@delaporte.es'
+const mailManagement = 'dpereze@planetevents.es'
+const mailHiring = 'efernandezd@planetevents.es'
 </script>

@@ -4,10 +4,9 @@
       <h1 class="title">Tienda</h1>
     </router-link>
     <p>
-      En la tienda oficial de Delaporte podrás encontrar todo tipo de merchandising relacionado con
-      el grupo, como camisetas, sudaderas, gorras, pósters y mucho más. Además, también podrás
-      adquirir sus discos en formato físico y digital, así como entradas para sus próximos
-      conciertos.
+      La tienda oficial de Delaporte está en proceso pero mientras podrás encontrar todo tipo de
+      merchandising relacionado con el grupo, como camisetas, sudaderas, chubasqueros y mucho más en
+      el siguiente enlace:
     </p>
     <p class="shop_link">
       <a href="https://onstage.es/578-delaporte">Merchandasing</a>

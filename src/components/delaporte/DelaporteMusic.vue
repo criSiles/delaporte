@@ -159,7 +159,7 @@ defineProps({
   padding: 0.5rem 1rem;
   border: 1px solid var(--text-secondary);
   border-radius: 5px;
-  width: 8rem;
+  max-width: 8rem;
   background-color: var(--text-secondary);
   color: var(--text-primary);
   font-size: 1rem;

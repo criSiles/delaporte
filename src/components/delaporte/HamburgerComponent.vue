@@ -82,6 +82,7 @@ export default {
   height: 100vh;
   width: 100%;
   padding-top: 6rem;
+  padding-left: 1rem;
   position: fixed;
   display: flex;
   flex-direction: column;
