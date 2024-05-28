@@ -33,6 +33,7 @@ defineProps({
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
   border-top: 0.5px solid grey;
+  padding-top: 3rem;
 }
 
 .img_container {

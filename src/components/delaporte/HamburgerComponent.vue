@@ -5,17 +5,44 @@
       :style="{ transform: !isCheckboxChecked ? 'translateX(0)' : 'translateX(140%)' }"
     >
       <li>
-        <router-link class="nav-links" :to="{ path: '/', hash: '#music' }">Música</router-link>
-      </li>
-      <li><router-link class="nav-links" :to="{ path: '/', hash: '#tour' }">Tour</router-link></li>
-      <li>
-        <router-link class="nav-links" :to="{ path: '/', hash: '#bio' }">Biografía</router-link>
-      </li>
-      <li>
-        <router-link class="nav-links" :to="{ path: '/', hash: '#shop' }">Tienda</router-link>
+        <router-link
+          @click="isCheckboxChecked = false"
+          class="nav-links"
+          :to="{ path: '/', hash: '#music' }"
+          >Música</router-link
+        >
       </li>
       <li>
-        <router-link class="nav-links" :to="{ path: '/', hash: '#contact' }">Contacto</router-link>
+        <router-link
+          @click="isCheckboxChecked = false"
+          class="nav-links"
+          :to="{ path: '/', hash: '#tour' }"
+          >Tour</router-link
+        >
+      </li>
+      <li>
+        <router-link
+          @click="isCheckboxChecked = false"
+          class="nav-links"
+          :to="{ path: '/', hash: '#bio' }"
+          >Biografía</router-link
+        >
+      </li>
+      <li>
+        <router-link
+          @click="isCheckboxChecked = false"
+          class="nav-links"
+          :to="{ path: '/', hash: '#shop' }"
+          >Tienda</router-link
+        >
+      </li>
+      <li>
+        <router-link
+          @click="isCheckboxChecked = false"
+          class="nav-links"
+          :to="{ path: '/', hash: '#contact' }"
+          >Contacto</router-link
+        >
       </li>
     </ul>
     <div id="hamburger" class="menu-container menu-size">

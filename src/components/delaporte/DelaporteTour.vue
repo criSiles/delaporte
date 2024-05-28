@@ -140,6 +140,8 @@
   padding: 1rem 4rem;
   font-family: 'Roboto', sans-serif;
   border-top: 0.5px solid grey;
+  margin-bottom: 2rem;
+  padding-top: 3rem;
 }
 
 .subtitle {
