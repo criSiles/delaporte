@@ -36,6 +36,7 @@
     :mailInfo="mailInfo"
     :mailManagement="mailManagement"
     :mailHiring="mailHiring"
+    :mailPress="mailPress"
   />
   <DelaporteFooter />
 </template>
@@ -93,4 +94,5 @@ const spotifyPathAlbum5 =
 const mailInfo = 'delaporte@delaporte.es'
 const mailManagement = 'dpereze@planetevents.es'
 const mailHiring = 'efernandezd@planetevents.es'
+const mailPress = 'victor@promosapiens.net'
 </script>

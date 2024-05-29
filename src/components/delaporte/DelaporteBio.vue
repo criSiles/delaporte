@@ -34,6 +34,7 @@ defineProps({
   font-family: 'Roboto', sans-serif;
   border-top: 0.5px solid grey;
   padding-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .img_container {

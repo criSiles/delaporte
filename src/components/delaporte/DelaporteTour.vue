@@ -133,27 +133,15 @@
 
 <style>
 #tour {
-  display: flex;
-  flex-direction: column;
   min-width: 100%;
   height: auto;
   padding: 1rem 4rem;
+  display: flex;
+  flex-direction: column;
   font-family: 'Roboto', sans-serif;
   border-top: 0.5px solid grey;
-  margin-bottom: 2rem;
   padding-top: 3rem;
-}
-
-.subtitle {
-  font-size: 1.2rem;
-  font-family: 'Rock Salt', cursive;
-  text-transform: uppercase;
-  font-weight: 400;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  color: var(--text-primary);
-  letter-spacing: -0.015rem;
-  opacity: 0.97;
+  margin-bottom: 3rem;
 }
 
 .concerts-container {
