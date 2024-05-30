@@ -75,10 +75,12 @@
       </div>
       <div class="tickets-container">
         <h1 class="subtitle">Entradas</h1>
-        <button class="concerts-list btn unable-btn">Comprar</button>
-        <button class="concerts-list btn unable-btn">Comprar</button>
-        <button class="concerts-list btn unable-btn">Comprar</button>
-        <button class="concerts-list btn unable-btn">Comprar</button>
+        <div v-for="(show, index) in showMessages" :key="index">
+          <button class="concerts-list btn unable-btn" @click="toggleMessage(index)">
+            Comprar
+          </button>
+          <div v-if="show" class="message">Concierto pasado</div>
+        </div>
         <a href="https://www.palenciasonora.com/entradas/">
           <button class="concerts-list btn able-btn">Comprar</button>
         </a>
@@ -130,6 +132,15 @@
     </div>
   </section>
 </template>
+<script setup>
+import { ref } from 'vue'
+
+const showMessages = ref([false, false, false, false])
+
+const toggleMessage = (index) => {
+  showMessages.value[index] = !showMessages.value[index]
+}
+</script>
 
 <style>
 #tour {
@@ -198,6 +209,12 @@
   color: var(--text-secondary);
 }
 
+.message {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+
 @media screen and (max-width: 780px) {
   #tour {
     padding: 1rem 2rem;
@@ -223,6 +240,10 @@
     max-width: 5.5rem;
     font-size: 1rem;
     padding: 0.4rem;
+  }
+
+  .message {
+    font-size: 0.7rem;
   }
 }
 </style>
