@@ -48,7 +48,7 @@ defineProps({
   place-items: center;
 }
 .img_container img {
-  width: 60%;
+  width: 95%;
   height: auto;
   margin: 1rem 1rem;
 }
@@ -59,6 +59,10 @@ defineProps({
   }
   .text_container {
     font-size: 1rem;
+  }
+
+  .img_container img {
+    width: 100%;
   }
 }
 </style>
