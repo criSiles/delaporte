@@ -74,7 +74,7 @@ onBeforeUnmount(() => {
 #header {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
   min-height: 64px;
   width: 100%;
   height: 64px;
@@ -108,8 +108,9 @@ onBeforeUnmount(() => {
 
 .header_logo img {
   width: 140px;
-  max-height: 66px;
+  max-height: 64px;
   margin: auto;
+  padding-top: 0.5rem;
 }
 
 .social_icons {
@@ -141,7 +142,7 @@ onBeforeUnmount(() => {
 @media (max-width: 600px) {
   .social_icons {
     margin-top: 10rem;
-    margin-right: -2rem;
+    margin-right: -1rem;
     flex-direction: column;
     align-items: flex-start;
   }
