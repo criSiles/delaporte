@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "default": "delaporte-cccb5"
+  },
+  "targets": {
+    "delaporte-cccb5": {
+      "hosting": {
+        "delaporte": [
+          "delaporte-cccb5.web.app"
+        ]
+      }
+    }
+  },
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}
