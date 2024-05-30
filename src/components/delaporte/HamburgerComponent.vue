@@ -2,7 +2,7 @@
   <div id="menu">
     <ul
       id="menu-items"
-      :style="{ transform: !isCheckboxChecked ? 'translateX(0)' : 'translateX(140%)' }"
+      :style="{ transform: isCheckboxChecked ? 'translateX(0)' : 'translateX(140%)' }"
     >
       <li>
         <router-link
@@ -79,7 +79,7 @@ export default {
 }
 #menu-items {
   background: var(--bg-primary);
-  height: 100vh;
+  height: 100%;
   width: 100%;
   padding-top: 6rem;
   padding-left: 1rem;
@@ -91,7 +91,9 @@ export default {
   text-align: center;
   transition: transform 0.5s ease-in-out;
   top: 0;
-  right: 138.5vw;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 2;
 }
 #menu-items li {
