@@ -117,7 +117,8 @@ onBeforeUnmount(() => {
   display: flex;
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 1rem;
+  padding-right: -rem;
   gap: 1rem;
 }
 
@@ -141,8 +142,9 @@ onBeforeUnmount(() => {
 
 @media (max-width: 600px) {
   .social_icons {
+    background-color: var(--bg-primary);
     margin-top: 10rem;
-    margin-right: -1rem;
+    margin-right: -2rem;
     flex-direction: column;
     align-items: flex-start;
   }

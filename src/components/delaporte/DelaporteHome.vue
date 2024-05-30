@@ -42,6 +42,6 @@ export default {
   width: 100%;
   max-width: 100%;
   height: auto;
-  padding: 1rem 4rem;
+  padding: 1rem 0rem;
 }
 </style>
