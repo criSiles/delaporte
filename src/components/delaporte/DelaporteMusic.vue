@@ -92,7 +92,7 @@ defineProps({
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0;
+  /* padding-top: 1rem; */
 }
 
 .album_container {
@@ -139,9 +139,10 @@ defineProps({
 .video_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
   justify-content: center;
   align-items: center;
+  gap: 4rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
   margin-left: 1rem;
   margin-right: 1rem;
@@ -177,6 +178,7 @@ defineProps({
 @media screen and (max-width: 780px) {
   .discography_gallery {
     justify-content: center;
+    padding-left: 0;
   }
 
   .album_container {

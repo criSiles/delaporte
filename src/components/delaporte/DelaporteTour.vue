@@ -146,19 +146,18 @@ const toggleMessage = (index) => {
 #tour {
   min-width: 100%;
   height: auto;
-  padding: 1rem 4rem;
+  padding-top: 3rem;
   display: flex;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
   border-top: 0.5px solid grey;
-  padding-top: 3rem;
   margin-bottom: 3rem;
 }
 
 .concerts-container {
   display: flex;
   justify-content: space-around;
-  padding: 0;
+  padding-top: 1rem;
 }
 
 .dates-container,
@@ -216,9 +215,6 @@ const toggleMessage = (index) => {
 }
 
 @media screen and (max-width: 780px) {
-  #tour {
-    padding: 1rem 2rem;
-  }
   .subtitle {
     font-size: 0.8rem;
   }

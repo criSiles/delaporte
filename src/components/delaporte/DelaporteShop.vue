@@ -27,6 +27,7 @@
   margin-bottom: 3rem;
 }
 #shop p {
+  padding-top: 3rem;
   font-size: 1.2rem;
   line-height: 1.5;
 }
@@ -34,5 +35,11 @@
 #shop .shop_link {
   margin-top: 2rem;
   text-align: center;
+}
+
+@media screen and (max-width: 780px) {
+  #shop p {
+    font-size: 1rem;
+  }
 }
 </style>

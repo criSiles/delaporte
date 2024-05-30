@@ -66,6 +66,7 @@ let mailPress = props.mailPress
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+  padding-top: 3rem;
 }
 
 .mail-container {
@@ -104,6 +105,9 @@ let mailPress = props.mailPress
 
   .info-container {
     min-width: 16rem;
+  }
+  .mail {
+    font-size: 1rem;
   }
 }
 </style>
