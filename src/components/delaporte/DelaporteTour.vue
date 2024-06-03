@@ -3,8 +3,7 @@
     <router-link class="nav-links" :to="{ path: '/', hash: '#tour' }">
       <h1 class="title">Tour</h1>
     </router-link>
-    <!-- TODO: Make a v-for and fetch the data od a json DB -->
-    <!-- TODO: Improve CSS to DRY -->
+    <!-- TODO: Make a v-for and fetch the data of a json DB -->
     <div class="concerts-container">
       <div class="dates-container">
         <h1 class="subtitle">Fechas</h1>
@@ -21,7 +20,7 @@
         <div class="concerts-list">12.07.24</div>
         <div class="concerts-list">20.07.24</div>
         <div class="concerts-list">26.07.24</div>
-        <div class="concerts-list">0X.08.24</div>
+        <div class="concerts-list">02.08.24</div>
         <div class="concerts-list">11.08.24</div>
         <div class="concerts-list">30.08.24</div>
         <div class="concerts-list">06.09.24</div>
@@ -45,9 +44,9 @@
         <div class="concerts-list">Benicassim</div>
         <div class="concerts-list">Benidorm</div>
         <div class="concerts-list">Zaragoza</div>
-        <div class="concerts-list">Sonorama</div>
+        <div class="concerts-list">Aranda de Duero</div>
         <div class="concerts-list">Cáceres</div>
-        <div class="concerts-list">Ebro</div>
+        <div class="concerts-list">Miranda de Ebro</div>
         <div class="concerts-list">Granada</div>
         <div class="concerts-list">Murcia</div>
       </div>
@@ -68,10 +67,10 @@
         <div class="concerts-list">Low Festival</div>
         <div class="concerts-list">Festival Amante</div>
         <div class="concerts-list">Sonorama Ribera</div>
-        <div class="concerts-list">Naturalsonora</div>
+        <div class="concerts-list">Natural Sonora</div>
         <div class="concerts-list">Ebrovisión</div>
         <div class="concerts-list">Granada Sound</div>
-        <div class="concerts-list">HermosaFest</div>
+        <div class="concerts-list">Hermosa Fest</div>
       </div>
       <div class="tickets-container">
         <h1 class="subtitle">Entradas</h1>
