@@ -5,9 +5,9 @@
     </router-link>
     <div class="text_container" v-html="bioText"></div>
     <div class="img_container">
-      <img :src="delaportePhoto1" />
-      <img :src="delaportePhoto2" />
-      <img :src="delaportePhoto3" />
+      <img :src="delaportePhoto1" alt="Sandra sticking her tongue out at Sergio" />
+      <img :src="delaportePhoto2" alt="Sandra and Sergio laying down" />
+      <img :src="delaportePhoto3" alt="Sandra and Sergio smiling" />
     </div>
   </section>
 </template>

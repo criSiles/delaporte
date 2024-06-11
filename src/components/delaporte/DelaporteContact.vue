@@ -5,28 +5,28 @@
     </router-link>
     <div class="contact-mails">
       <div class="mail-container">
-        <h1 class="subtitle">Información</h1>
+        <h2 class="subtitle">Información</h2>
         <div class="info-container">
           <a :href="twitterPath"><i class="fa fa-envelope" aria-hidden="true"></i></a>
           <a class="mail" href="mailto:{{ mailInfo }}">{{ mailInfo }}</a>
         </div>
       </div>
       <div class="mail-container">
-        <h1 class="subtitle">Management</h1>
+        <h2 class="subtitle">Management</h2>
         <div class="info-container">
           <a :href="twitterPath"><i class="fa fa-envelope" aria-hidden="true"></i></a>
           <a class="mail" href="mailto:{{ mailManagement }}">{{ mailManagement }}</a>
         </div>
       </div>
       <div class="mail-container">
-        <h1 class="subtitle">Contratación</h1>
+        <h2 class="subtitle">Contratación</h2>
         <div class="info-container">
           <a :href="twitterPath"><i class="fa fa-envelope" aria-hidden="true"></i></a>
           <a class="mail" href="mailto:{{ mailHiring }}">{{ mailHiring }}</a>
         </div>
       </div>
       <div class="mail-container">
-        <h1 class="subtitle">Prensa</h1>
+        <h2 class="subtitle">Prensa</h2>
         <div class="info-container">
           <a :href="twitterPath"><i class="fa fa-envelope" aria-hidden="true"></i></a>
           <a class="mail" href="mailto:{{ mailPress }}">{{ mailPress }}</a>

@@ -23,3 +23,18 @@ const router = createRouter({
 })
 
 export default router
+
+// TODO: Consider using a URL structure without hashes to improve SEO and accessibility
+// import { createRouter, createWebHistory } from 'vue-router'
+
+// const router = createRouter({
+//   history: createWebHistory(),
+//   routes,
+//   scrollBehavior(to, from, savedPosition) {
+//     if (savedPosition) {
+//       return savedPosition
+//     } else {
+//       return { top: 0 }
+//     }
+//   }
+// })

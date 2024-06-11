@@ -80,12 +80,6 @@
           </button>
           <div v-if="show" class="message">Concierto pasado</div>
         </div>
-        <a href="https://www.palenciasonora.com/entradas/">
-          <button class="concerts-list btn able-btn">Comprar</button>
-        </a>
-        <a href="https://www.entradas.com/artist/tenerife-music-festival/">
-          <button class="concerts-list btn able-btn">Comprar</button>
-        </a>
         <a href="https://antorchasfestival.com/#entradas">
           <button class="concerts-list btn able-btn">Comprar</button>
         </a>
@@ -134,7 +128,7 @@
 <script setup>
 import { ref } from 'vue'
 
-const showMessages = ref([false, false, false, false])
+const showMessages = ref([false, false, false, false, false, false])
 
 const toggleMessage = (index) => {
   showMessages.value[index] = !showMessages.value[index]
@@ -161,14 +155,22 @@ const toggleMessage = (index) => {
 
 .dates-container,
 .cities-container,
-.venues-container,
-.tickets-container {
+.venues-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   list-style: none;
   flex: 1 1 17%;
   margin-top: 1rem;
+}
+
+.tickets-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  flex: 1 1 17%;
+  margin-top: 0.85rem;
 }
 
 /* TODO: Make the words be align at the left */
