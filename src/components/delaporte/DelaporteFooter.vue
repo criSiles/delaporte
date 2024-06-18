@@ -1,6 +1,6 @@
 <template>
   <footer id="footer">
-    <div>©2024 DELAPORTE.</div>
+    <div>©2024 DELAPORTE</div>
   </footer>
 </template>
 
