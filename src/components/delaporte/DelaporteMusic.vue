@@ -92,7 +92,6 @@ defineProps({
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  /* padding-top: 1rem; */
 }
 
 .album_container {
