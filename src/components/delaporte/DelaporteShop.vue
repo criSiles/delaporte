@@ -4,60 +4,36 @@
       <h1 class="title">Tienda</h1>
     </router-link>
     <p>
-      Delaporte tiene una gran variedad de productos de merchandasing. A continuación, te mostramos
+      Delaporte tiene una gran variedad de productos de merchandising. A continuación, te mostramos
       algunos de los productos más vendidos:
     </p>
     <div class="shop-container">
-      <a href="https://onstage.es/delaporte/1564-sudadera-delaporte-aqui-y-ahora-negra.html">
+      <a v-for="product in productsData.products" :key="product.id" :href="product.url">
         <div class="shop-item">
-          <h3 class="subtitle">Sudadera</h3>
-          <img src="/photos/hoodie.svg" alt="hoodie" />
-        </div>
-      </a>
-      <a href="https://onstage.es/delaporte/1562-camiseta-delaporte-estoy-aqui-y-ahora-negra.html">
-        <div class="shop-item">
-          <h3 class="subtitle">Camiseta</h3>
-          <img src="/photos/shirt.svg" alt="t-shirt" />
-        </div>
-      </a>
-      <a href="https://onstage.es/delaporte/1569-vinilo-aqui-y-ahora-delaporte.html">
-        <div class="shop-item">
-          <h3 class="subtitle">Vinilo</h3>
-          <img src="/photos/cd.svg" alt="cd" />
-        </div>
-      </a>
-      <a href="https://onstage.es/delaporte/1376-taza-delaporte.html">
-        <div class="shop-item">
-          <h3 class="subtitle">Taza</h3>
-          <img src="/photos/mug.svg" alt="mug" />
-        </div>
-      </a>
-      <a href="https://onstage.es/delaporte/1568-tote-bag-delaporte-aqui-y-ahora.html">
-        <div class="shop-item">
-          <h3 class="subtitle">Bolsa</h3>
-          <img src="/photos/bag.svg" alt="bag" />
-        </div>
-      </a>
-      <a href="https://onstage.es/delaporte/1375-botella-aluminio-delaporte.html">
-        <div class="shop-item">
-          <h3 class="subtitle">Botella</h3>
-          <img src="/photos/bottle.svg" alt="bottle" />
-        </div>
-      </a>
-      <a href="https://onstage.es/delaporte/1566-chubasquero-delaporte-aqui-y-ahora-negro.html">
-        <div class="shop-item">
-          <h3 class="subtitle">chubasquero</h3>
-          <img src="/photos/raincoat.svg" alt="raincoat" />
+          <h3 class="subtitle">{{ product.title }}</h3>
+          <img :src="product.imgSrc" :alt="product.title" />
         </div>
       </a>
     </div>
     <p>Para ver el resto de productos entra en la tienda oficial:</p>
-    <a href="https://onstage.es/578-delaporte"
-      ><button class="btn"><i class="fas fa-shopping-cart btn_icon"></i>Tienda</button></a
-    >
+    <a href="https://onstage.es/578-delaporte">
+      <button class="btn"><i class="fas fa-shopping-cart btn_icon"></i>Tienda</button>
+    </a>
   </section>
 </template>
 
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const productsData = ref({ products: [] })
+
+onMounted(async () => {
+  const response = await fetch('/data/productsDb.json')
+  const data = await response.json()
+  productsData.value = data
+  console.log(productsData.value)
+})
+</script>
 <style>
 #shop {
   width: 100%;
@@ -81,8 +57,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-
   margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .shop-item {

@@ -1,0 +1,47 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Sudadera",
+      "imgSrc": "/photos/hoodie.svg",
+      "url": "https://onstage.es/delaporte/1564-sudadera-delaporte-aqui-y-ahora-negra.html"
+    },
+
+    {
+      "id": 2,
+      "title": "Camiseta",
+      "imgSrc": "/photos/shirt.svg",
+      "url": "https://onstage.es/delaporte/1562-camiseta-delaporte-estoy-aqui-y-ahora-negra.html"
+    },
+    {
+      "id": 3,
+      "title": "Vinilo",
+      "imgSrc": "/photos/cd.svg",
+      "url": "https://onstage.es/delaporte/1569-vinilo-aqui-y-ahora-delaporte.html"
+    },
+    {
+      "id": 4,
+      "title": "Taza",
+      "imgSrc": "/photos/mug.svg",
+      "url": "https://onstage.es/delaporte/1375-botella-aluminio-delaporte.html"
+    },
+    {
+      "id": 5,
+      "title": "Botella",
+      "imgSrc": "/photos/bottle.svg",
+      "url": "https://onstage.es/delaporte/1376-taza-delaporte.html"
+    },
+    {
+      "id": 6,
+      "title": "Bolsa",
+      "imgSrc": "/photos/bag.svg",
+      "url": "https://onstage.es/delaporte/1568-tote-bag-delaporte-aqui-y-ahora.html"
+    },
+    {
+      "id": 7,
+      "title": "Chubasquero",
+      "imgSrc": "/photos/raincoat.svg",
+      "url": "https://onstage.es/delaporte/1566-chubasquero-delaporte-aqui-y-ahora-negro.html"
+    }
+  ]
+}
