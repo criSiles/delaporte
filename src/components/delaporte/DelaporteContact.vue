@@ -7,28 +7,28 @@
       <div class="mail-container">
         <h2 class="subtitle">Información</h2>
         <div class="info-container">
-          <a :href="twitterPath"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          <i class="fa fa-envelope" aria-hidden="true"></i>
           <a class="mail" href="mailto:{{ mailInfo }}">{{ mailInfo }}</a>
         </div>
       </div>
       <div class="mail-container">
         <h2 class="subtitle">Management</h2>
         <div class="info-container">
-          <a :href="twitterPath"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          <i class="fa fa-envelope" aria-hidden="true"></i>
           <a class="mail" href="mailto:{{ mailManagement }}">{{ mailManagement }}</a>
         </div>
       </div>
       <div class="mail-container">
         <h2 class="subtitle">Contratación</h2>
         <div class="info-container">
-          <a :href="twitterPath"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          <i class="fa fa-envelope" aria-hidden="true"></i>
           <a class="mail" href="mailto:{{ mailHiring }}">{{ mailHiring }}</a>
         </div>
       </div>
       <div class="mail-container">
         <h2 class="subtitle">Prensa</h2>
         <div class="info-container">
-          <a :href="twitterPath"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+          <i class="fa fa-envelope" aria-hidden="true"></i>
           <a class="mail" href="mailto:{{ mailPress }}">{{ mailPress }}</a>
         </div>
       </div>
@@ -84,6 +84,7 @@ let mailPress = props.mailPress
   padding: 0rem 1rem;
   margin-bottom: 2rem;
   min-width: 20rem;
+  color: var(--text-primary);
 }
 
 .mail {

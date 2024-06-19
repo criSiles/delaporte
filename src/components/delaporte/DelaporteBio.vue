@@ -17,7 +17,6 @@ defineProps({
   delaportePhoto1: String,
   delaportePhoto2: String,
   delaportePhoto3: String,
-  delaportePhoto4: String,
   bioText: String
 })
 </script>

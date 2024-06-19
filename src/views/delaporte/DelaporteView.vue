@@ -29,7 +29,6 @@
     :delaportePhoto1="delaportePhoto1"
     :delaportePhoto2="delaportePhoto2"
     :delaportePhoto3="delaportePhoto3"
-    :delaportePhoto4="delaportePhoto4"
   />
   <DelaporteShop />
   <DelaporteContact

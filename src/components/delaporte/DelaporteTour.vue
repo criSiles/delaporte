@@ -3,40 +3,30 @@
     <router-link class="nav-links" :to="{ path: '/', hash: '#tour' }">
       <h1 class="title">Tour</h1>
     </router-link>
+    <div class="concert-row">
+      <div class="concert-date subtitle">fecha</div>
+      <div class="concert-city subtitle">Ciudad</div>
+      <div class="concert-venue subtitle">lugar</div>
+      <div class="concert-tickets subtitle">entradas</div>
+    </div>
     <div class="concerts-container">
-      <div class="dates">
-        <h1 class="subtitle">Fechas</h1>
-        <div v-for="concert in concertsData.concerts" :key="concert.id" class="concerts-list">
-          <div>{{ concert.date }}</div>
-        </div>
-      </div>
-      <div class="cities">
-        <h1 class="subtitle">Ciudades</h1>
-        <div v-for="concert in concertsData.concerts" :key="concert.id" class="concerts-list">
-          <div class="cities">{{ concert.city }}</div>
-        </div>
-      </div>
-      <div class="venues">
-        <h1 class="subtitle">Lugar</h1>
-        <div v-for="concert in concertsData.concerts" :key="concert.id" class="concerts-list">
-          <div class="venues">{{ concert.venue }}</div>
-        </div>
-      </div>
-      <div class="tickets-container">
-        <h1 class="subtitle">Entradas</h1>
-        <div v-for="concert in concertsData.concerts" :key="concert.id" class="concerts-list">
+      <div v-for="concert in concertsData.concerts" :key="concert.id" class="concert-row">
+        <div class="concert-date">{{ concert.date }}</div>
+        <div class="concert-city">{{ concert.city }}</div>
+        <div class="concert-venue">{{ concert.venue }}</div>
+        <div class="concert-tickets">
           <a :href="getTicketLink(concert)">
             <button v-if="!concert.past" :class="{ 'able-btn': true, 'tickets-btn': true }">
               Comprar
             </button>
             <button
               v-else
-              :class="{ 'unable-btn': isButtonDisabled, 'tickets-btn': true }"
-              @click.prevent="handleButtonClick"
+              :class="{ 'unable-btn': true, 'tickets-btn': true }"
+              @click.prevent="handleButtonClick(concert.id)"
             >
               Comprar
             </button>
-            <div v-if="showMessage" class="message">Concierto pasado</div>
+            <div v-if="showMessage[concert.id]" class="message">Concierto pasado</div>
           </a>
         </div>
       </div>
@@ -48,18 +38,23 @@
 import { ref, onMounted } from 'vue'
 
 const concertsData = ref({ concerts: [] })
-const showMessages = ref([])
-const isButtonDisabled = ref(true)
+const showMessage = ref({})
 
 const getTicketLink = (concert) => {
   return concert['tickets-link']
+}
+
+const handleButtonClick = (concertId) => {
+  showMessage.value[concertId] = !showMessage.value[concertId]
 }
 
 onMounted(async () => {
   const response = await fetch('/data/concertsDb.json')
   const data = await response.json()
   concertsData.value = data
-  showMessages.value = data.concerts.map(() => false)
+  data.concerts.forEach((concert) => {
+    showMessage.value[concert.id] = false
+  })
 })
 </script>
 
@@ -77,49 +72,29 @@ onMounted(async () => {
 
 .concerts-container {
   display: flex;
+  flex-direction: column;
+}
+
+.concert-row {
+  display: flex;
   justify-content: space-around;
-  padding-top: 1rem;
+  align-items: center;
+  margin-top: 1rem;
 }
 
-.dates,
-.cities,
-.venues {
+.concert-date,
+.concert-city,
+.concert-venue,
+.concert-tickets {
+  flex: 1;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  list-style: none;
-  flex: 1 1 17%;
-  margin-top: 1rem;
   color: var(--text-primary);
-  font-family: 'Roboto', sans-serif;
   font-size: 1.2rem;
   opacity: 0.97;
-  margin-top: 1rem;
 }
 
-.tickets-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-  flex: 1 1 17%;
-  margin-top: 1.1rem;
-}
-
-.concerts-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  list-style: none;
-  flex: 1 1 17%;
-  color: var(--text-primary);
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
-  opacity: 0.97;
-  margin-top: 1rem;
-}
-
-/* TODO: Align the buttons with the rest */
 .tickets-btn {
   padding: 0.5rem 1rem;
   border: 1px solid var(--text-primary);
@@ -129,7 +104,6 @@ onMounted(async () => {
   width: 8rem;
   font-size: 1.2rem;
   opacity: 0.97;
-  margin-top: 1rem;
 }
 
 .able-btn:hover {
@@ -153,26 +127,23 @@ onMounted(async () => {
   .subtitle {
     font-size: 0.8rem;
   }
-  .concerts-list {
-    font-size: 1rem;
-  }
 
-  .venues {
+  .concert-venue {
     display: none;
   }
-  .dates,
-  .cities,
-  .tickets {
+
+  .concert-date,
+  .concert-city,
+  .concert-tickets {
     margin-top: 0;
     white-space: nowrap;
+    font-size: 1rem;
   }
-
-  .btn {
+  .tickets-btn {
     max-width: 5.5rem;
     font-size: 1rem;
     padding: 0.4rem;
   }
-
   .message {
     font-size: 0.7rem;
   }
