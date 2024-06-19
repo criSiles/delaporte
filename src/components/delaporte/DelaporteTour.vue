@@ -36,9 +36,34 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+import { initializeApp } from 'firebase/app'
+import { getFirestore, collection, getDocs } from 'firebase/firestore'
+
+console.log(import.meta.env.VITE_FIRESTORE_SDK_KEY)
+
+const serviceAccount = JSON.parse(import.meta.env.VITE_FIRESTORE_SDK_KEY)
+
+console.log(serviceAccount)
+
+const app = initializeApp(serviceAccount)
+
+const db = getFirestore(app)
 
 const concertsData = ref({ concerts: [] })
 const showMessage = ref({})
+
+async function readDocuments() {
+  const snapshot = await getDocs(collection(db, 'concerts'))
+
+  if (snapshot.empty) {
+    console.log('No matching documents.')
+    return
+  }
+
+  snapshot.forEach((doc) => {
+    console.log(doc.id, '=>', doc.data())
+  })
+}
 
 const getTicketLink = (concert) => {
   return concert['tickets-link']
@@ -55,6 +80,7 @@ onMounted(async () => {
   data.concerts.forEach((concert) => {
     showMessage.value[concert.id] = false
   })
+  readDocuments().catch(console.error)
 })
 </script>
 
