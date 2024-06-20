@@ -4,13 +4,13 @@
       <h1 class="title">Tour</h1>
     </router-link>
     <div class="concert-row">
-      <div class="concert-date subtitle">fecha</div>
+      <div class="concert-date subtitle">Fecha</div>
       <div class="concert-city subtitle">Ciudad</div>
-      <div class="concert-venue subtitle">lugar</div>
-      <div class="concert-tickets subtitle">entradas</div>
+      <div class="concert-venue subtitle">Lugar</div>
+      <div class="concert-tickets subtitle">Entradas</div>
     </div>
     <div class="concerts-container">
-      <div v-for="concert in concertsData.concerts" :key="concert.id" class="concert-row">
+      <div v-for="concert in concertsData" :key="concert.id" class="concert-row">
         <div class="concert-date">{{ concert.date }}</div>
         <div class="concert-city">{{ concert.city }}</div>
         <div class="concert-venue">{{ concert.venue }}</div>
@@ -21,8 +21,8 @@
             </button>
             <button
               v-else
-              :class="{ 'unable-btn': true, 'tickets-btn': true }"
-              @click.prevent="handleButtonClick(concert.id)"
+              class="unable-btn tickets-btn"
+              @click.prevent="showPastConcertMessage(concert.id)"
             >
               Comprar
             </button>
@@ -39,51 +39,49 @@ import { ref, onMounted } from 'vue'
 import { initializeApp } from 'firebase/app'
 import { getFirestore, collection, getDocs } from 'firebase/firestore'
 
-console.log(import.meta.env.VITE_FIRESTORE_SDK_KEY)
+// Firebase configuration
+const firebaseConfig = JSON.parse(import.meta.env.VITE_FIRESTORE_SDK_KEY)
 
-const serviceAccount = JSON.parse(import.meta.env.VITE_FIRESTORE_SDK_KEY)
+// Initialize Firebase app
+const app = initializeApp(firebaseConfig)
 
-console.log(serviceAccount)
-
-const app = initializeApp(serviceAccount)
-
+// Initialize Firestore database
 const db = getFirestore(app)
 
-const concertsData = ref({ concerts: [] })
+// Reactive state for concerts data
+const concertsData = ref([])
+
+// Reactive state for showing messages for past concerts
 const showMessage = ref({})
 
-async function readDocuments() {
-  const snapshot = await getDocs(collection(db, 'concerts'))
-
-  if (snapshot.empty) {
-    console.log('No matching documents.')
-    return
-  }
-
-  snapshot.forEach((doc) => {
-    console.log(doc.id, '=>', doc.data())
-  })
+// Function to fetch concerts data from Firestore
+async function fetchConcerts() {
+  const querySnapshot = await getDocs(collection(db, 'concerts'))
+  concertsData.value = querySnapshot.docs
+    .map((doc) => ({
+      id: doc.id,
+      ...doc.data()
+    }))
+    .sort((a, b) => Number(a.id) - Number(b.id))
+  console.log(concertsData.value)
 }
 
 const getTicketLink = (concert) => {
   return concert['tickets-link']
 }
 
-const handleButtonClick = (concertId) => {
-  showMessage.value[concertId] = !showMessage.value[concertId]
+// Function to handle click on past concert's buy button
+function showPastConcertMessage(concertId) {
+  showMessage.value[concertId] = true
+  // Optionally, hide the message after some time
+  setTimeout(() => {
+    showMessage.value[concertId] = false
+  }, 3000)
 }
 
-onMounted(async () => {
-  const response = await fetch('/data/concertsDb.json')
-  const data = await response.json()
-  concertsData.value = data
-  data.concerts.forEach((concert) => {
-    showMessage.value[concert.id] = false
-  })
-  readDocuments().catch(console.error)
-})
+// Fetch concerts data when component is mounted
+onMounted(fetchConcerts)
 </script>
-
 <style>
 #tour {
   min-width: 100%;
