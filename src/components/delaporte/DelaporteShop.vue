@@ -31,7 +31,6 @@ onMounted(async () => {
   const response = await fetch('/data/productsDb.json')
   const data = await response.json()
   productsData.value = data
-  console.log(productsData.value)
 })
 </script>
 <style>
@@ -41,7 +40,6 @@ onMounted(async () => {
   padding: 1rem 4rem;
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
   border-top: 0.5px solid grey;
   padding-top: 3rem;
   justify-content: center;
@@ -77,31 +75,7 @@ onMounted(async () => {
   cursor: pointer;
 }
 
-.btn {
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--text-secondary);
-  border-radius: 5px;
-  max-width: 8rem;
-  background-color: var(--text-secondary);
-  color: var(--text-primary);
-  font-size: 1.2rem;
-  cursor: pointer;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-
-.btn_icon {
-  margin-right: 0.5rem;
-}
-
-.btn:hover {
-  opacity: 0.8;
-}
-
 @media screen and (max-width: 780px) {
-  #shop p {
-    font-size: 1rem;
-  }
   .shop-container {
     display: none;
   }

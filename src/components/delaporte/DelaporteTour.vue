@@ -63,7 +63,6 @@ async function fetchConcerts() {
       ...doc.data()
     }))
     .sort((a, b) => Number(a.id) - Number(b.id))
-  console.log(concertsData.value)
 }
 
 const getTicketLink = (concert) => {
@@ -76,7 +75,7 @@ function showPastConcertMessage(concertId) {
   // Optionally, hide the message after some time
   setTimeout(() => {
     showMessage.value[concertId] = false
-  }, 3000)
+  }, 1000)
 }
 
 // Fetch concerts data when component is mounted
@@ -89,7 +88,7 @@ onMounted(fetchConcerts)
   padding-top: 3rem;
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   border-top: 0.5px solid grey;
   margin-bottom: 3rem;
 }
@@ -120,6 +119,7 @@ onMounted(fetchConcerts)
 }
 
 .tickets-btn {
+  font-family: 'Montserrat', sans-serif;
   padding: 0.5rem 1rem;
   border: 1px solid var(--text-primary);
   background-color: var(--background-primary);
@@ -143,8 +143,19 @@ onMounted(fetchConcerts)
 
 .message {
   color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: 0.8rem;
   margin-top: 0.5rem;
+  margin-left: 0.3rem;
+  animation: fadeOut 2s ease-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 @media screen and (max-width: 780px) {
@@ -170,6 +181,7 @@ onMounted(fetchConcerts)
   }
   .message {
     font-size: 0.7rem;
+    margin-left: -0.3rem;
   }
 }
 </style>

@@ -90,8 +90,7 @@ let mailPress = props.mailPress
 .mail {
   display: flex;
   margin: 1rem;
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .mail:hover {

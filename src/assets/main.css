@@ -35,7 +35,7 @@ body::-webkit-scrollbar-thumb:hover {
 .title {
   font-family: 'Rock Salt', cursive;
   text-transform: uppercase;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 400;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -58,12 +58,39 @@ body::-webkit-scrollbar-thumb:hover {
   opacity: 0.97;
 }
 
+.btn {
+  font-family: 'Montserrat', sans-serif;
+  display: inline-flex; /* Aligns icon and text within the button */
+  align-items: center;
+  justify-content: center;
+  width: 10rem;
+  height: 3rem;
+  border: 1px solid var(--text-secondary);
+  border-radius: 5px;
+  background-color: var(--text-secondary);
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0.5rem;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.btn_icon {
+  margin-right: 0.5rem;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
 p {
   font-family: 'Montserrat', sans-serif;
   color: var(--text-primary);
   opacity: 0.95;
   margin-bottom: 1rem;
   font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 a {
@@ -74,4 +101,21 @@ a {
 a:hover {
   color: var(--text-secondary);
   font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 1.2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .btn {
+    width: 8rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem;
+  }
 }

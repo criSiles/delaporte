@@ -76,14 +76,13 @@ defineProps({
 })
 </script>
 
-<style scoped>
+<style>
 #music {
   width: 100%;
   height: auto;
   padding: 1rem 4rem;
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
   border-top: 0.5px solid grey;
   padding-top: 3rem;
 }
@@ -154,26 +153,6 @@ defineProps({
   margin-bottom: 1rem;
 }
 
-.btn {
-  margin: 0 1rem;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--text-secondary);
-  border-radius: 5px;
-  max-width: 8rem;
-  background-color: var(--text-secondary);
-  color: var(--text-primary);
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.btn_icon {
-  margin-right: 0.5rem;
-}
-
-.btn:hover {
-  opacity: 0.8;
-}
-
 @media screen and (max-width: 780px) {
   .discography_gallery {
     justify-content: center;
@@ -182,6 +161,12 @@ defineProps({
 
   .album_container {
     flex: 1 1 100%;
+  }
+  .buttons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
   }
 }
 </style>
