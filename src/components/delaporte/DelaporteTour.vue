@@ -113,7 +113,7 @@ onMounted(fetchConcerts)
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--text-primary);
+  color: var(--color-primary);
   font-size: 1.2rem;
   opacity: 0.97;
 }
@@ -121,9 +121,9 @@ onMounted(fetchConcerts)
 .tickets-btn {
   font-family: 'Montserrat', sans-serif;
   padding: 0.5rem 1rem;
-  border: 1px solid var(--text-primary);
+  border: 1px solid var(--color-primary);
   background-color: var(--background-primary);
-  color: var(--text-primary);
+  color: var(--color-primary);
   border-radius: 5px;
   width: 8rem;
   font-size: 1.2rem;
@@ -131,18 +131,18 @@ onMounted(fetchConcerts)
 }
 
 .able-btn:hover {
-  background-color: var(--text-secondary);
-  border: 1px solid var(--text-secondary);
+  background-color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
   cursor: pointer;
 }
 
 .unable-btn:hover {
   cursor: not-allowed;
-  color: var(--text-secondary);
+  color: var(--color-secondary);
 }
 
 .message {
-  color: var(--text-secondary);
+  color: var(--color-secondary);
   font-size: 0.8rem;
   margin-top: 0.5rem;
   margin-left: 0.3rem;
@@ -154,7 +154,7 @@ onMounted(fetchConcerts)
     opacity: 1;
   }
   to {
-    opacity: 0;
+    opacity: 0.2;
   }
 }
 

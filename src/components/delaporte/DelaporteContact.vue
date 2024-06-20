@@ -28,7 +28,7 @@
       <div class="mail-container">
         <h2 class="subtitle">Prensa</h2>
         <div class="info-container">
-          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <i class="fa fa-envelope icon" aria-hidden="true"></i>
           <a class="mail" href="mailto:{{ mailPress }}">{{ mailPress }}</a>
         </div>
       </div>
@@ -84,7 +84,7 @@ let mailPress = props.mailPress
   padding: 0rem 1rem;
   margin-bottom: 2rem;
   min-width: 20rem;
-  color: var(--text-primary);
+  color: var(--color-primary);
 }
 
 .mail {
@@ -94,7 +94,7 @@ let mailPress = props.mailPress
 }
 
 .mail:hover {
-  color: var(--text-secondary);
+  color: var(--color-secondary);
 }
 
 @media screen and (max-width: 780px) {

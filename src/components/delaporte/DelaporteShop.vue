@@ -66,7 +66,7 @@ onMounted(async () => {
   width: 155px;
   height: 155px;
   padding: 2rem 2rem;
-  border: 1px solid var(--text-secondary);
+  border: 1px solid var(--color-secondary);
   border-radius: 6px;
 }
 

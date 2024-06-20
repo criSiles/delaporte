@@ -78,7 +78,7 @@ export default {
   text-transform: uppercase;
 }
 #menu-items {
-  background: var(--bg-primary);
+  background: var(--color-background);
   height: 100%;
   width: 100%;
   padding-top: 6rem;
@@ -103,12 +103,12 @@ export default {
   text-decoration: none;
   list-style: none;
   font-size: 1.2rem;
-  color: var(--text-primary);
+  color: var(--color-primary);
 }
 
 .nav-links:hover {
   text-decoration: none;
-  color: var(--text-secondary);
+  color: var(--color-secondary);
 }
 
 #menu-checkbox {
@@ -160,7 +160,7 @@ input[id='menu-checkbox']:checked ~ #hamburger-lines .line3 {
   height: 0.15rem;
   width: 100%;
   border-radius: 0.625rem;
-  background: var(--text-primary);
+  background: var(--color-primary);
 }
 
 #hamburger-lines .line1 {

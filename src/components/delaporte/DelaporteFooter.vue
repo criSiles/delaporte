@@ -29,7 +29,7 @@
   gap: 1rem;
   padding: 1rem;
   font-family: 'Rock Salt', cursive;
-  color: var(--text-primary);
+  color: var(--color-primary);
   opacity: 0.97;
   font-size: 0.9rem;
 }
@@ -37,7 +37,7 @@
 #made-with {
   margin-top: 1rem;
   margin-bottom: 0rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
   opacity: 0.85;
   cursor: pointer;
 }

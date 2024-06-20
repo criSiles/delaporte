@@ -72,8 +72,8 @@ onBeforeUnmount(() => {
 </script>
 <style>
 #header {
-  background-color: var(--bg-primary);
-  color: var(--text-primary);
+  background-color: var(--color-background);
+  color: var(--color-primary);
   padding: 1rem 2rem;
   min-height: 64px;
   width: 100%;
@@ -123,26 +123,26 @@ onBeforeUnmount(() => {
 }
 
 .social_icons li a {
-  color: var(--text-primary);
+  color: var(--color-primary);
 }
 
 .social_icons li a:hover,
 .social_button:hover {
-  color: var(--text-secondary);
+  color: var(--color-secondary);
 }
 
 .social_button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--bg-primary);
+  background-color: var(--color-background);
   border: none;
-  color: var(--text-primary);
+  color: var(--color-primary);
 }
 
 @media (max-width: 600px) {
   .social_icons {
-    background-color: var(--bg-primary);
+    background-color: var(--color-background);
     margin-top: 10rem;
     margin-right: -2rem;
     flex-direction: column;

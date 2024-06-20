@@ -1,11 +1,27 @@
-@import './base.css';
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 :root {
-  font-size: 16px;
-  --text-primary: #fff;
-  --text-secondary: #b53033;
-  --bg-primary: #181818;
-  --transition-speed: 600ms;
   font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  --color-primary: #fff;
+  --color-secondary: #b53033;
+  --color-background: #181818;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-primary);
+  background: var(--color-background);
+  // TODO: Watch this
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Styling the scrollbar */
@@ -15,19 +31,19 @@ body::-webkit-scrollbar {
 
 /* Styling the scrollbar track */
 body::-webkit-scrollbar-track {
-  background: var(--text-primary);
+  background: var(--color-primary);
   border-radius: 10px;
 }
 
 /* Styling the scrollbar thumb */
 body::-webkit-scrollbar-thumb {
   border-radius: 10px;
-  background: var(--text-secondary);
+  background: var(--color-secondary);
 }
 
 /* Add a hover effect to the scrollbar thumb */
 body::-webkit-scrollbar-thumb:hover {
-  background: var(--bg-primary);
+  background: var(--color-background);
 }
 
 /* Common CSS */
@@ -42,10 +58,11 @@ body::-webkit-scrollbar-thumb:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--text-primary);
+  color: var(--color-primary);
   letter-spacing: -0.015rem;
   opacity: 0.97;
 }
+
 .subtitle {
   font-size: 1.2rem;
   font-family: 'Rock Salt', cursive;
@@ -53,7 +70,7 @@ body::-webkit-scrollbar-thumb:hover {
   font-weight: 400;
   margin-top: 2rem;
   margin-bottom: 2rem;
-  color: var(--text-primary);
+  color: var(--color-primary);
   letter-spacing: -0.015rem;
   opacity: 0.97;
 }
@@ -65,10 +82,10 @@ body::-webkit-scrollbar-thumb:hover {
   justify-content: center;
   width: 10rem;
   height: 3rem;
-  border: 1px solid var(--text-secondary);
+  border: 1px solid var(--color-secondary);
   border-radius: 5px;
-  background-color: var(--text-secondary);
-  color: var(--text-primary);
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
   font-size: 1.2rem;
   text-align: center;
   margin: 0.5rem;
@@ -86,7 +103,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 p {
   font-family: 'Montserrat', sans-serif;
-  color: var(--text-primary);
+  color: var(--color-primary);
   opacity: 0.95;
   margin-bottom: 1rem;
   font-size: 1.2rem;
@@ -94,16 +111,16 @@ p {
 }
 
 a {
-  color: var(--text-primary);
+  color: var(--color-primary);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--text-secondary);
+  color: var(--color-secondary);
   font-weight: 500;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
   .title {
     font-size: 1.2rem;
   }

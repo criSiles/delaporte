@@ -130,7 +130,7 @@ defineProps({
 .album_container:hover .spotify_icon {
   display: flex;
   z-index: 1;
-  color: var(--text-primary);
+  color: var(--color-primary);
   font-size: 2rem;
 }
 
