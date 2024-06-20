@@ -3,19 +3,19 @@
     <router-link class="nav-links" :to="{ path: '/', hash: '#shop' }">
       <h1 class="title">Tienda</h1>
     </router-link>
-    <p>
+    <p class="merch-p-1">
       Delaporte tiene una gran variedad de productos de merchandising. A continuación, te mostramos
       algunos de los productos más vendidos:
     </p>
     <div class="shop-container">
       <a v-for="product in productsData.products" :key="product.id" :href="product.url">
         <div class="shop-item">
-          <h3 class="subtitle">{{ product.title }}</h3>
+          <!-- <h3 class="subtitle">{{ product.title }}</h3> -->
           <img :src="product.imgSrc" :alt="product.title" />
         </div>
       </a>
     </div>
-    <p>Para ver el resto de productos entra en la tienda oficial:</p>
+    <p>Para ver todos los productos entra en la tienda oficial:</p>
     <a href="https://onstage.es/578-delaporte">
       <button class="btn"><i class="fas fa-shopping-cart btn_icon"></i>Tienda</button>
     </a>
@@ -46,11 +46,6 @@ onMounted(async () => {
   padding-top: 3rem;
   justify-content: center;
   align-items: center;
-}
-#shop p {
-  padding-top: 2rem;
-  font-size: 1.2rem;
-  line-height: 1.5;
 }
 
 .shop-container {
@@ -106,6 +101,12 @@ onMounted(async () => {
 @media screen and (max-width: 780px) {
   #shop p {
     font-size: 1rem;
+  }
+  .shop-container {
+    display: none;
+  }
+  .merch-p-1 {
+    display: none;
   }
 }
 </style>
