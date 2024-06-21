@@ -1,6 +1,7 @@
 <template>
   <footer id="footer">
     <div>©2024 DELAPORTE</div>
+    <p class="footer-p">MadMoonMusic</p>
     <p id="made-with">
       Made with
       <svg
@@ -26,17 +27,20 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
-  padding: 1rem;
+  padding: var(--padding-medium) var(--padding-large);
+  gap: var(--margin-xsmall);
   font-family: 'Rock Salt', cursive;
   color: var(--color-primary);
   opacity: 0.97;
   font-size: 0.9rem;
+  margin-top: var(--margin-xlarge);
 }
 
+.footer-p {
+  font-size: 0.8rem;
+}
 #made-with {
-  margin-top: 1rem;
-  margin-bottom: 0rem;
+  margin-top: var(--margin-large);
   font-size: 0.8rem;
   opacity: 0.85;
   cursor: pointer;

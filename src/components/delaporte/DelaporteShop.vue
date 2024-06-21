@@ -15,7 +15,7 @@
         </div>
       </a>
     </div>
-    <p>Para ver todos los productos entra en la tienda oficial:</p>
+    <p class="merch-p-2">Para ver todos los productos entra en la tienda oficial:</p>
     <a href="https://onstage.es/578-delaporte">
       <button class="btn"><i class="fas fa-shopping-cart btn_icon"></i>Tienda</button>
     </a>
@@ -37,35 +37,35 @@ onMounted(async () => {
 #shop {
   width: 100%;
   height: auto;
-  padding: 1rem 4rem;
+  padding: var(--padding-medium) var(--padding-large);
   display: flex;
   flex-direction: column;
   border-top: 0.5px solid grey;
-  padding-top: 3rem;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  margin-bottom: var(--margin-large);
 }
 
 .shop-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 2rem;
-  margin-top: 1rem;
+  margin-bottom: var(--margin-medium);
+  margin-top: var(--margin-small);
 }
 
 .shop-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1rem;
-  margin-top: 0rem;
+  margin: var(--margin-medium) var(--margin-small);
 }
 
 .shop-item img {
   width: 155px;
   height: 155px;
-  padding: 2rem 2rem;
+  padding: var(--padding-large) var(--padding-large);
   border: 1px solid var(--color-secondary);
   border-radius: 6px;
 }
@@ -75,6 +75,9 @@ onMounted(async () => {
   cursor: pointer;
 }
 
+.merch-p-2 {
+  margin-bottom: var(--margin-small);
+}
 @media screen and (max-width: 780px) {
   .shop-container {
     display: none;

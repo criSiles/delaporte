@@ -3,8 +3,8 @@
     <router-link class="nav-links" :to="{ path: '/', hash: '#bio' }"
       ><h1 class="title">Biografía</h1>
     </router-link>
-    <p class="text_container" v-html="bioText"></p>
-    <div class="img_container">
+    <p class="text-container" v-html="bioText"></p>
+    <div class="img-container">
       <img :src="delaportePhoto1" alt="Sandra sticking her tongue out at Sergio" />
       <img :src="delaportePhoto2" alt="Sandra and Sergio laying down" />
       <img :src="delaportePhoto3" alt="Sandra and Sergio smiling" />
@@ -25,28 +25,34 @@ defineProps({
 #bio {
   width: 100%;
   height: auto;
-  padding: 1rem 4rem;
+  padding: var(--padding-medium) var(--padding-xlarge);
   display: flex;
   flex-direction: column;
   border-top: 0.5px solid grey;
-  padding-top: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: var(--margin-large);
 }
 
-.img_container {
+.text-container {
+  margin: var(--margin-small) 0;
+}
+
+.img-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   place-items: center;
 }
 
-.img_container img {
+.img-container img {
   width: 95%;
   height: auto;
-  margin: 1rem 1rem;
+  margin: var(--margin-small) 0;
 }
 
 @media screen and (max-width: 780px) {
-  .img_container {
+  #bio {
+    padding: var(--padding-medium) var(--padding-large);
+  }
+  .img-container {
     grid-template-columns: repeat(1, 1fr);
   }
 

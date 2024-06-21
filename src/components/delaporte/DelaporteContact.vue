@@ -7,28 +7,28 @@
       <div class="mail-container">
         <h2 class="subtitle">Información</h2>
         <div class="info-container">
-          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <i class="fa fa-envelope mail-icon" aria-hidden="true"></i>
           <a class="mail" href="mailto:{{ mailInfo }}">{{ mailInfo }}</a>
         </div>
       </div>
       <div class="mail-container">
         <h2 class="subtitle">Management</h2>
         <div class="info-container">
-          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <i class="fa fa-envelope mail-icon" aria-hidden="true"></i>
           <a class="mail" href="mailto:{{ mailManagement }}">{{ mailManagement }}</a>
         </div>
       </div>
       <div class="mail-container">
         <h2 class="subtitle">Contratación</h2>
         <div class="info-container">
-          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <i class="fa fa-envelope mail-icon" aria-hidden="true"></i>
           <a class="mail" href="mailto:{{ mailHiring }}">{{ mailHiring }}</a>
         </div>
       </div>
       <div class="mail-container">
         <h2 class="subtitle">Prensa</h2>
         <div class="info-container">
-          <i class="fa fa-envelope icon" aria-hidden="true"></i>
+          <i class="fa fa-envelope mail-icon" aria-hidden="true"></i>
           <a class="mail" href="mailto:{{ mailPress }}">{{ mailPress }}</a>
         </div>
       </div>
@@ -51,14 +51,13 @@ let mailPress = props.mailPress
 
 <style>
 #contact {
-  display: flex;
-  flex-direction: column;
   width: 100%;
   height: auto;
-  padding: 1rem 4rem;
+  padding: var(--padding-medium) var(--padding-large);
+  display: flex;
+  flex-direction: column;
   border-top: 0.5px solid grey;
-  padding-top: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: var(--margin-large);
 }
 
 .contact-mails {
@@ -66,7 +65,6 @@ let mailPress = props.mailPress
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
-  padding-top: 3rem;
 }
 
 .mail-container {
@@ -81,33 +79,29 @@ let mailPress = props.mailPress
   align-items: center;
   border-radius: 5px;
   border: rgb(130, 130, 130) 0.1rem solid;
-  padding: 0rem 1rem;
-  margin-bottom: 2rem;
-  min-width: 20rem;
+  padding: 0rem var(--padding-small);
+  min-width: 16rem;
+  max-width: 22rem;
   color: var(--color-primary);
 }
 
 .mail {
   display: flex;
-  margin: 1rem;
-  font-family: 'Montserrat', sans-serif;
+  margin: var(--margin-small) 0;
 }
 
 .mail:hover {
   color: var(--color-secondary);
 }
 
+.mail-icon {
+  margin-right: var(--margin-xsmall);
+}
+
 @media screen and (max-width: 780px) {
   .contact-mails {
     flex-direction: column;
     flex-wrap: nowrap;
-  }
-
-  .info-container {
-    min-width: 16rem;
-  }
-  .mail {
-    font-size: 1rem;
   }
 }
 </style>

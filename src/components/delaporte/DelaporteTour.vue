@@ -72,7 +72,7 @@ const getTicketLink = (concert) => {
 // Function to handle click on past concert's buy button
 function showPastConcertMessage(concertId) {
   showMessage.value[concertId] = true
-  // Optionally, hide the message after some time
+  // TODO: Delete setTimeout, make it like before
   setTimeout(() => {
     showMessage.value[concertId] = false
   }, 1000)
@@ -85,12 +85,11 @@ onMounted(fetchConcerts)
 #tour {
   min-width: 100%;
   height: auto;
-  padding-top: 3rem;
+  padding: var(--padding-medium) var(--padding-small);
   display: flex;
   flex-direction: column;
-  font-family: 'Montserrat', sans-serif;
   border-top: 0.5px solid grey;
-  margin-bottom: 3rem;
+  margin-bottom: var(--margin-large);
 }
 
 .concerts-container {
@@ -102,7 +101,7 @@ onMounted(fetchConcerts)
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin-top: 1rem;
+  margin-top: var(--margin-small);
 }
 
 .concert-date,
@@ -119,15 +118,15 @@ onMounted(fetchConcerts)
 }
 
 .tickets-btn {
-  font-family: 'Montserrat', sans-serif;
-  padding: 0.5rem 1rem;
-  border: 1px solid var(--color-primary);
-  background-color: var(--background-primary);
-  color: var(--color-primary);
-  border-radius: 5px;
   width: 8rem;
   font-size: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
   opacity: 0.97;
+  padding: var(--padding-small) var(--padding-medium);
+  background-color: var(--background-primary);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: 5px;
 }
 
 .able-btn:hover {
@@ -141,11 +140,11 @@ onMounted(fetchConcerts)
   color: var(--color-secondary);
 }
 
+/* TODO: I don't like the effect that does, fix it */
 .message {
   color: var(--color-secondary);
   font-size: 0.8rem;
-  margin-top: 0.5rem;
-  margin-left: 0.3rem;
+  margin-top: var(--margin-xsmall);
   animation: fadeOut 2s ease-out forwards;
 }
 
@@ -159,10 +158,6 @@ onMounted(fetchConcerts)
 }
 
 @media screen and (max-width: 780px) {
-  .subtitle {
-    font-size: 0.8rem;
-  }
-
   .concert-venue {
     display: none;
   }
@@ -172,16 +167,15 @@ onMounted(fetchConcerts)
   .concert-tickets {
     margin-top: 0;
     white-space: nowrap;
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   .tickets-btn {
     max-width: 5.5rem;
     font-size: 1rem;
-    padding: 0.4rem;
+    padding: var(--padding-small);
   }
   .message {
     font-size: 0.7rem;
-    margin-left: -0.3rem;
   }
 }
 </style>

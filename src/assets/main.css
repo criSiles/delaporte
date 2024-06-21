@@ -12,6 +12,15 @@
   --color-primary: #fff;
   --color-secondary: #b53033;
   --color-background: #181818;
+  --margin-xsmall: 0.5rem;
+  --margin-small: 1rem;
+  --margin-medium: 2rem;
+  --margin-large: 3rem;
+  --margin-xlarge: 4rem;
+  --padding-small: 0.5rem;
+  --padding-medium: 1rem;
+  --padding-large: 2rem;
+  --padding-xlarge: 4rem;
 }
 
 body {
@@ -49,34 +58,31 @@ body::-webkit-scrollbar-thumb:hover {
 /* Common CSS */
 
 .title {
-  font-family: 'Rock Salt', cursive;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-  font-weight: 400;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Rock Salt', cursive;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: var(--margin-large) 0;
   color: var(--color-primary);
   letter-spacing: -0.015rem;
   opacity: 0.97;
 }
 
 .subtitle {
-  font-size: 1.2rem;
   font-family: 'Rock Salt', cursive;
-  text-transform: uppercase;
+  font-size: 1.2rem;
   font-weight: 400;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  text-transform: uppercase;
+  margin: var(--margin-large) 0;
   color: var(--color-primary);
   letter-spacing: -0.015rem;
   opacity: 0.97;
 }
 
 .btn {
-  font-family: 'Montserrat', sans-serif;
   display: inline-flex; /* Aligns icon and text within the button */
   align-items: center;
   justify-content: center;
@@ -88,13 +94,12 @@ body::-webkit-scrollbar-thumb:hover {
   color: var(--color-primary);
   font-size: 1.2rem;
   text-align: center;
-  margin: 0.5rem;
-  margin-bottom: 2rem;
+  margin: var(--margin-small);
   cursor: pointer;
 }
 
 .btn_icon {
-  margin-right: 0.5rem;
+  margin-right:var(--margin-small);
 }
 
 .btn:hover {
@@ -105,7 +110,6 @@ p {
   font-family: 'Montserrat', sans-serif;
   color: var(--color-primary);
   opacity: 0.95;
-  margin-bottom: 1rem;
   font-size: 1.2rem;
   line-height: 1.5;
 }

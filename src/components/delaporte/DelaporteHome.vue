@@ -35,13 +35,13 @@ export default {
 
 <style>
 #home {
-  margin-top: 3rem;
+  margin-top: var(--margin-large);
 }
+
 .gif {
-  margin-top: 0rem;
   width: 100%;
   max-width: 100%;
   height: auto;
-  padding-top: 1rem;
+  padding-top: var(--padding-medium);
 }
 </style>

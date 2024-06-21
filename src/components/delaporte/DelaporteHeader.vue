@@ -72,20 +72,19 @@ onBeforeUnmount(() => {
 </script>
 <style>
 #header {
-  background-color: var(--color-background);
-  color: var(--color-primary);
-  padding: 1rem 2rem;
-  min-height: 64px;
   width: 100%;
+  min-height: 64px;
   height: 64px;
+  padding: var(--padding-medium) var(--padding-large);
+  background-color: var(--color-background);
   left: 0px;
   right: 0px;
+  top: 0;
+  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 0;
-  z-index: 1;
 }
 .header_section {
   display: flex;
@@ -110,15 +109,13 @@ onBeforeUnmount(() => {
   width: 140px;
   max-height: 64px;
   margin: auto;
-  padding-top: 0.5rem;
+  padding-top: var(--padding-small);
 }
 
 .social_icons {
   display: flex;
   list-style: none;
-  margin: 0;
-  padding: 1rem;
-  padding-right: -rem;
+  padding: var(--padding-medium);
   gap: 1rem;
 }
 

@@ -80,11 +80,11 @@ defineProps({
 #music {
   width: 100%;
   height: auto;
-  padding: 1rem 4rem;
+  padding: var(--padding-medium) var(--padding-large);
   display: flex;
   flex-direction: column;
   border-top: 0.5px solid grey;
-  padding-top: 3rem;
+  margin-bottom: var(--margin-large);
 }
 
 .discography_gallery {
@@ -100,7 +100,7 @@ defineProps({
   align-items: center;
   list-style: none;
   flex: 1 1 17%;
-  margin: 1rem;
+  margin: var(--margin-small);
 }
 
 .album_container a {
@@ -110,7 +110,7 @@ defineProps({
 .album_image {
   width: 100%;
   height: auto;
-  margin: 1rem 0;
+  margin: var(--margin-small) 0;
   z-index: 0;
 }
 
@@ -140,17 +140,13 @@ defineProps({
   justify-content: center;
   align-items: center;
   gap: 4rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: var(--margin-medium) var(--margin-large);
 }
 
 .buttons_container {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 780px) {
