@@ -21,6 +21,9 @@
     :spotifyPathAlbum5="spotifyPathAlbum5"
     :spotifyPath="spotifyPath"
     :youtubePath="youtubePath"
+    :videoUrl1="videoUrl1"
+    :videoUrl2="videoUrl2"
+    :videoUrl3="videoUrl3"
   />
   <DelaporteTour />
 
@@ -30,7 +33,7 @@
     :delaportePhoto2="delaportePhoto2"
     :delaportePhoto3="delaportePhoto3"
   />
-  <DelaporteShop />
+  <DelaporteShop :shopUrl="shopUrl" />
   <DelaporteContact
     :mailInfo="mailInfo"
     :mailManagement="mailManagement"
@@ -88,6 +91,12 @@ const spotifyPathAlbum4 =
   'https://open.spotify.com/intl-es/album/1SDB8j1wY6xzKSAGASJKWB?si=qCnuww-GS1KYZFn-1Tz-wA'
 const spotifyPathAlbum5 =
   'https://open.spotify.com/intl-es/album/1jphrfgmheLuAI0T9E1SG4?si=PtzbIb03Rmy7R4xFk1lFCw'
+const videoUrl1 = 'https://www.youtube.com/watch?v=IlJKOODBt-Q&ab_channel=DELAPORTE'
+const videoUrl2 = 'https://www.youtube.com/watch?v=cErpuQKIt4M&ab_channel=DelaporteVEVO'
+const videoUrl3 = 'https://www.youtube.com/watch?v=GwDzuKRen_8&ab_channel=DelaporteVEVO'
+
+// SHOP
+const shopUrl = 'https://onstage.es/578-delaporte'
 
 // CONTACT
 const mailInfo = 'delaporte@delaporte.es'

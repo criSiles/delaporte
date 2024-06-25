@@ -5,15 +5,15 @@
     </router-link>
     <p class="text-container" v-html="bioText"></p>
     <div class="img-container">
-      <img :src="delaportePhoto1" alt="Sandra sticking her tongue out at Sergio" />
-      <img :src="delaportePhoto2" alt="Sandra and Sergio laying down" />
-      <img :src="delaportePhoto3" alt="Sandra and Sergio smiling" />
+      <img :src="props.delaportePhoto1" alt="Sandra sticking her tongue out at Sergio" />
+      <img :src="props.delaportePhoto2" alt="Sandra and Sergio laying down" />
+      <img :src="props.delaportePhoto3" alt="Sandra and Sergio smiling" />
     </div>
   </section>
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   delaportePhoto1: String,
   delaportePhoto2: String,
   delaportePhoto3: String,

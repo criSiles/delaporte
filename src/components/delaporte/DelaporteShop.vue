@@ -16,7 +16,7 @@
       </a>
     </div>
     <p class="merch-p-2">Para ver todos los productos entra en la tienda oficial:</p>
-    <a href="https://onstage.es/578-delaporte">
+    <a :href="props.shopUrl">
       <button class="btn"><i class="fas fa-shopping-cart btn_icon"></i>Tienda</button>
     </a>
   </section>
@@ -24,6 +24,10 @@
 
 <script setup>
 import { ref, onMounted } from 'vue'
+
+const props = defineProps({
+  shopUrl: String
+})
 
 const productsData = ref({ products: [] })
 

@@ -5,52 +5,46 @@
     </router-link>
     <ul class="discography_gallery">
       <li class="album_container">
-        <a :href="spotifyPathAlbum1">
-          <img class="album_image" :src="album1" />
+        <a :href="props.spotifyPathAlbum1">
+          <img class="album_image" :src="props.album1" />
           <i class="fab fa-spotify spotify_icon"></i>
         </a>
       </li>
       <li class="album_container">
-        <a :href="spotifyPathAlbum2">
-          <img class="album_image" :src="album2" />
+        <a :href="props.spotifyPathAlbum2">
+          <img class="album_image" :src="props.album2" />
           <i class="fab fa-spotify spotify_icon"></i>
         </a>
       </li>
       <li class="album_container">
-        <a :href="spotifyPathAlbum3">
-          <img class="album_image" :src="album3" />
+        <a :href="props.spotifyPathAlbum3">
+          <img class="album_image" :src="props.album3" />
           <i class="fab fa-spotify spotify_icon"></i>
         </a>
       </li>
       <li class="album_container">
-        <a :href="spotifyPathAlbum4">
-          <img class="album_image" :src="album4" />
+        <a :href="props.spotifyPathAlbum4">
+          <img class="album_image" :src="props.album4" />
           <i class="fab fa-spotify spotify_icon"></i>
         </a>
       </li>
       <li class="album_container">
-        <a :href="spotifyPathAlbum5">
-          <img class="album_image" :src="album5" />
+        <a :href="props.spotifyPathAlbum5">
+          <img class="album_image" :src="props.album5" />
           <i class="fab fa-spotify spotify_icon"></i>
         </a>
       </li>
     </ul>
     <div class="video_container">
-      <VideoPlayer
-        videoUrl="https://www.youtube.com/watch?v=cErpuQKIt4M&ab_channel=DelaporteVEVO"
-      />
-      <VideoPlayer
-        videoUrl="https://www.youtube.com/watch?v=GwDzuKRen_8&ab_channel=DelaporteVEVO"
-      />
-      <VideoPlayer
-        videoUrl="https://www.youtube.com/watch?v=9ShtaVkL9VU&ab_channel=DelaporteVEVO"
-      />
+      <VideoPlayer :videoUrl="videoUrl1" />
+      <VideoPlayer :videoUrl="videoUrl2" />
+      <VideoPlayer :videoUrl="videoUrl3" />
     </div>
     <div class="buttons_container">
-      <a :href="spotifyPath">
+      <a :href="props.spotifyPath">
         <button class="btn"><i class="fab fa-spotify btn_icon"></i>Spotify</button>
       </a>
-      <a :href="youtubePath">
+      <a :href="props.youtubePath">
         <button class="btn"><i class="fab fa-youtube btn_icon"></i>Youtube</button>
       </a>
     </div>
@@ -60,7 +54,7 @@
 <script setup>
 import VideoPlayer from '@/components/delaporte/VideoPlayer.vue'
 
-defineProps({
+const props = defineProps({
   album1: String,
   album2: String,
   album3: String,
@@ -72,7 +66,10 @@ defineProps({
   spotifyPathAlbum4: String,
   spotifyPathAlbum5: String,
   spotifyPath: String,
-  youtubePath: String
+  youtubePath: String,
+  videoUrl1: String,
+  videoUrl2: String,
+  videoUrl3: String
 })
 </script>
 
