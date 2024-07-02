@@ -5,32 +5,32 @@
     </router-link>
     <ul class="discography_gallery">
       <li class="album_container">
-        <a :href="props.spotifyPathAlbum1">
-          <img class="album_image" :src="props.album1" />
+        <a :href="props.spotifyPathAlbum1" aria-label="Spotify link to Como Anoche">
+          <img class="album_image" alt="Como Anoche" :src="props.album1" />
           <i class="fab fa-spotify spotify_icon"></i>
         </a>
       </li>
       <li class="album_container">
-        <a :href="props.spotifyPathAlbum2">
-          <img class="album_image" :src="props.album2" />
+        <a :href="props.spotifyPathAlbum2" aria-label="Spotify link to Las Montañas">
+          <img class="album_image" alt="Las Montañas" :src="props.album2" />
           <i class="fab fa-spotify spotify_icon"></i>
         </a>
       </li>
       <li class="album_container">
-        <a :href="props.spotifyPathAlbum3">
-          <img class="album_image" :src="props.album3" />
+        <a :href="props.spotifyPathAlbum3" aria-label="Spotify link to Titanas">
+          <img class="album_image" alt="Titanas" :src="props.album3" />
           <i class="fab fa-spotify spotify_icon"></i>
         </a>
       </li>
       <li class="album_container">
-        <a :href="props.spotifyPathAlbum4">
-          <img class="album_image" :src="props.album4" />
+        <a :href="props.spotifyPathAlbum4" aria-label="Spotify link to Abril">
+          <img class="album_image" alt="Abril" :src="props.album4" />
           <i class="fab fa-spotify spotify_icon"></i>
         </a>
       </li>
       <li class="album_container">
-        <a :href="props.spotifyPathAlbum5">
-          <img class="album_image" :src="props.album5" />
+        <a :href="props.spotifyPathAlbum5" aria-label="Spotify link to Aqui y Ahora">
+          <img class="album_image" alt="Aqui y Ahora" :src="props.album5" />
           <i class="fab fa-spotify spotify_icon"></i>
         </a>
       </li>

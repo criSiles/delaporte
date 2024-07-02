@@ -27,7 +27,7 @@ body {
   min-height: 100vh;
   color: var(--color-primary);
   background: var(--color-background);
-  // TODO: Watch this
+  /* TODO: Watch this */
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -99,7 +99,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .btn_icon {
-  margin-right:var(--margin-small);
+  margin-right: var(--margin-small);
 }
 
 .btn:hover {

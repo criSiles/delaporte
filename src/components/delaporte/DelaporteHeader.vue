@@ -6,7 +6,7 @@
     <div class="header_section center">
       <router-link :to="{ path: '/', hash: '#home' }">
         <div class="header_logo">
-          <img :src="logoPath" alt="Delaporte logo" />
+          <img :src="logoPath" alt="Delaporte logo" width="200" height="100" />
         </div>
       </router-link>
     </div>
@@ -21,19 +21,19 @@
       </button>
       <ul class="social_icons" v-show="!isMobile || showIcons">
         <li>
-          <a :href="twitterPath"><i class="fab fa-twitter"></i></a>
+          <a aria-label="twitter" :href="twitterPath"><i class="fab fa-twitter"></i></a>
         </li>
         <li>
-          <a :href="instagramPath"><i class="fab fa-instagram"></i></a>
+          <a aria-label="instagram" :href="instagramPath"><i class="fab fa-instagram"></i></a>
         </li>
         <li>
-          <a :href="facebookPath"><i class="fab fa-facebook"></i></a>
+          <a aria-label="facebook" :href="facebookPath"><i class="fab fa-facebook"></i></a>
         </li>
         <li>
-          <a :href="spotifyPath"><i class="fab fa-spotify"></i></a>
+          <a aria-label="spotify" :href="spotifyPath"><i class="fab fa-spotify"></i></a>
         </li>
         <li>
-          <a :href="youtubePath"><i class="fab fa-youtube"></i></a>
+          <a aria-label="youtube" :href="youtubePath"><i class="fab fa-youtube"></i></a>
         </li>
       </ul>
     </div>

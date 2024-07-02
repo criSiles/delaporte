@@ -1,5 +1,5 @@
 <template>
-  <div id="menu">
+  <nav id="menu" role="navigation" aria-label="Main navigation">
     <ul
       id="menu-items"
       :style="{ transform: isCheckboxChecked ? 'translateX(0)' : 'translateX(140%)' }"
@@ -58,7 +58,7 @@
         <span class="line line3"></span>
       </div>
     </div>
-  </div>
+  </nav>
 </template>
 
 <script>

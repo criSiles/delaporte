@@ -1,6 +1,11 @@
 <template>
   <section id="home">
-    <img class="gif" :src="gifPath" :style="{ transform: `scale(${scaleFactor})` }" />
+    <img
+      class="gif"
+      alt="Delaporte Aqui y Ahora gif"
+      :src="gifPath"
+      :style="{ transform: `scale(${scaleFactor})` }"
+    />
   </section>
 </template>
 
